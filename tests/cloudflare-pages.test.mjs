@@ -12,6 +12,24 @@ const request=(path='/',{method='GET',headers={},body,...rest}={})=>new Request(
 const handler=(options={})=>createPagesHandler({lessons,assetPaths:new Set(['/','/index.html','/app.js']),...options});
 const model=raw=>new Response(JSON.stringify({choices:[{finish_reason:'stop',message:{content:JSON.stringify(raw)}}]}));
 
+test('Public Pages requires no credentials and preserves model and path protection',async()=>{
+  const publicEnv={...env,QABAS_ACCESS_MODE:'public',QABAS_REVIEW_PASSWORD:undefined};
+  let calls=0;
+  const handle=handler({fetchImpl:async()=>{calls++;return model({route:'permission',evidence:'دون إذن'});}});
+  for(const path of ['/','/app.js','/api/config']){
+    const r=await handle(request(path,{headers:{Authorization:''}}),publicEnv);
+    assert.equal(r.status,200);assert.equal(r.headers.get('www-authenticate'),null);
+    const text=await r.text();assert.ok(!text.includes(key)&&!text.includes(password));
+  }
+  const health=await handle(request('/healthz',{headers:{Authorization:''}}),publicEnv);
+  assert.deepEqual(await health.json(),{status:'ok',mode:'public'});
+  assert.equal((await handle(request('/.env.local',{headers:{Authorization:''}}),publicEnv)).status,404);
+  assert.equal((await handle(request('/api/reflect',{method:'POST',headers:{Authorization:'',Origin:'https://other.invalid'},body:JSON.stringify(input)}),publicEnv)).status,403);
+  assert.equal(calls,0);
+  const result=await handle(request('/api/reflect',{method:'POST',headers:{Authorization:''},body:JSON.stringify(input)}),publicEnv);
+  assert.deepEqual(await result.json(),{route:'permission',status:'ok',evidence:'دون إذن'});assert.equal(calls,1);
+});
+
 test('Pages protects assets and APIs, does not disclose secrets, and fails closed without setup',async()=>{
   const handle=handler();
   for(const path of ['/','/app.js','/api/config']){

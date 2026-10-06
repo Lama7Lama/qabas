@@ -39,7 +39,7 @@ export async function readPagesJSON(request,{maxBytes=8192,timeoutMs=15000}={}){
   }finally{clearTimeout(timer);reader.releaseLock();}
 }
 
-// The review password and the limits remain server-side. Counters apply to one
+// Public access is explicit; optional review credentials and limits stay server-side. Counters apply to one
 // isolate, not globally across Cloudflare's network; no answers or IPs are saved.
 export function createPagesHandler({lessons,assetPaths,fetchImpl=globalThis.fetch,now=Date.now,allowLocal=false,onFailure=()=>{}}={}){
   if(!(lessons instanceof Map)||!(assetPaths instanceof Set))throw Error('Trusted build data required');
@@ -55,13 +55,13 @@ export function createPagesHandler({lessons,assetPaths,fetchImpl=globalThis.fetc
       origin=configured.origin;
     }catch{return send(503,{error:'configuration_required'});}
     if(url.origin!==origin || !secure && !(allowLocal && url.hostname==='127.0.0.1'))return send(403,{error:'forbidden'});
-    const password=env.QABAS_REVIEW_PASSWORD;
-    if(typeof password!=='string'||password.trim().length<20||password.length>200)return send(503,{error:'configuration_required'});
+    const publicAccess=env.QABAS_ACCESS_MODE==='public',password=env.QABAS_REVIEW_PASSWORD;
+    if(!publicAccess&&(typeof password!=='string'||password.trim().length<20||password.length>200))return send(503,{error:'configuration_required'});
     const key=typeof env.GROQ_API_KEY==='string'?env.GROQ_API_KEY:'';
-    if(url.pathname==='/healthz' && ['GET','HEAD'].includes(request.method))return send(key.trim()?200:503,{status:key.trim()?'ok':'configuration_required',mode:'review'});
+    if(url.pathname==='/healthz' && ['GET','HEAD'].includes(request.method))return send(key.trim()?200:503,{status:key.trim()?'ok':'configuration_required',mode:publicAccess?'public':'review'});
     const navigation=request.method==='GET' && request.headers.get('sec-fetch-mode')==='navigate' && request.headers.get('sec-fetch-dest')==='document';
     if(request.headers.get('sec-fetch-site')==='cross-site'&&!navigation)return send(403,{error:'forbidden'});
-    if(!await authorized(request,password))return send(401,{error:'review_access_required'},{'WWW-Authenticate':'Basic realm="Qabas review", charset="UTF-8"'});
+    if(!publicAccess&&!await authorized(request,password))return send(401,{error:'review_access_required'},{'WWW-Authenticate':'Basic realm="Qabas review", charset="UTF-8"'});
     const service=()=>createLessonAIService({lessons,provider:'groq',apiKey:key,fetchImpl,maxRequests:2});
     if(url.pathname==='/api/config'){
       if(!['GET','HEAD'].includes(request.method))return send(405,{error:'method'});

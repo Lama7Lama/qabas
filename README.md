@@ -19,7 +19,7 @@ Node.js 22 أو أحدث. التطوير المحلي: `npm run build` ثم `npm
 
 ## Cloudflare Pages
 
-أمر البناء `npm run build:cloudflare`، الناتج `dist/cloudflare`. خادم Pages Functions مجمع في `_worker.js`، ومفتاح Groq في Secrets لدى المزود. نسخة التحكيم محمية باسم الدخول qabas وكلمة سر؛ اعتماد المحتوى العلمي وحقوقه مستقل عن الاستضافة. [الإعداد والخصوصية](docs/CLOUDFLARE.md).
+أمر البناء `npm run build:cloudflare`، الناتج `dist/cloudflare`. خادم Pages Functions مجمع في `_worker.js`، ومفتاح Groq في Secrets لدى المزود. الموقع متاح دون بيانات دخول عند QABAS_ACCESS_MODE=public؛ مفتاح النموذج يبقى في الخادم. اعتماد المحتوى العلمي وحقوقه مستقل عن فتح الوصول. [الإعداد والخصوصية](docs/CLOUDFLARE.md).
 
 المشروع الحالي ينشر بواسطة `npm run deploy:cloudflare` بعد إعادة البناء والفحص. رفع المصدر إلى GitHub لا ينشر الموقع تلقائيا.
 
