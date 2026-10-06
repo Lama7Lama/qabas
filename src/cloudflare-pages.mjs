@@ -40,7 +40,7 @@ export async function readPagesJSON(request,{maxBytes=8192,timeoutMs=15000}={}){
 
 // The review password and the limits remain server-side. Counters apply to one
 // isolate, not globally across Cloudflare's network; no answers or IPs are saved.
-export function createPagesHandler({lessons,assetPaths,fetchImpl=globalThis.fetch,now=Date.now,allowLocal=false}={}){
+export function createPagesHandler({lessons,assetPaths,fetchImpl=globalThis.fetch,now=Date.now,allowLocal=false,onFailure=()=>{}}={}){
   if(!(lessons instanceof Map)||!(assetPaths instanceof Set))throw Error('Trusted build data required');
   let active=false,windowStart=0,count=0;
   return async function handle(request,env){
@@ -74,6 +74,13 @@ export function createPagesHandler({lessons,assetPaths,fetchImpl=globalThis.fetc
       try{
         const input=await readPagesJSON(request),transfer=url.pathname==='/api/transfer-feedback';
         const ai=service(),result=await (transfer?ai.feedback(input,{signal:request.signal}):ai.analyze(input,{signal:request.signal}));
+        // Operational codes only: never log answers, quotes, keys or raw errors.
+        if(['unavailable','invalid','rate_limited','budget_exhausted'].includes(result.status)){
+          const diagnostic={event:'qabas_model_failure',task:transfer?'transfer':'reason',status:result.status};
+          if(Number.isInteger(result.runtime?.httpStatus))diagnostic.httpStatus=result.runtime.httpStatus;
+          if(['network_error','cancelled_or_timeout','invalid_response','incomplete_or_refused','invalid_json','invalid_output'].includes(result.runtime?.reason))diagnostic.reason=result.runtime.reason;
+          try{onFailure(diagnostic);}catch{}
+        }
         return send(200,transfer?{status:result.status,strengths:result.strengths,additions:result.additions}:{route:result.route,status:result.status,evidence:result.evidence});
       }catch(error){
         const status=[408,413].includes(error.statusCode)?error.statusCode:400;
