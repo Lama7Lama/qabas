@@ -80,7 +80,7 @@ try{
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await page.evaluate(()=>window.scrollTo(0,0));await page.screenshot({path:'docs/qa/assessment-verdict-mobile.png',fullPage:true});checks.push('personal feedback and collapsed example fit mobile width');
  await page.locator('#about-btn').click();
  const aboutText=await page.locator('#dialog-content').textContent();
- assert.ok(aboutText.includes('إجابة موقف التطبيق'));assert.ok(aboutText.includes('خارج الجهاز'));
+ assert.ok(aboutText.includes('موقف التطبيق'));assert.ok(aboutText.includes('خارج جهازك'));
  assert.ok(!aboutText.includes('راجع مختص الأدلة والمصادر'));assert.ok(!aboutText.includes('صاحبة المشروع'));
  assert.deepEqual(await page.locator('.about-references a').evaluateAll(links=>links.map(link=>link.href)),['https://dorar.net/hadith','https://quranpedia.net/','https://shamela.ws/']);
  await page.locator('#dialog-save').check();await page.locator('.close-dialog').click();

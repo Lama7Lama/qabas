@@ -61,7 +61,7 @@ export function validateCollection(catalog, contents, {release=false}={}) {
   const errors=[], ids=new Set(), paths=new Set();
   if(catalog.about){
     const about=catalog.about,allowed=new Set(['https://dorar.net/hadith','https://quranpedia.net/','https://shamela.ws/']);
-    if(['aiRole','aiReview','aiLimits','privacy','sourcesBody','referencesLabel'].some(k=>typeof about[k]!=='string'||!about[k].trim())||!Array.isArray(about.references)||about.references.length!==3||new Set(about.references.map(r=>r?.url)).size!==3||about.references.some(r=>typeof r?.label!=='string'||!r.label.trim()||!allowed.has(r.url)))errors.push('Invalid about copy or references');
+    if(['aiRoleTitle','aiRole','aiLimitsTitle','privacyTitle','sourcesBody','referencesLabel'].some(k=>typeof about[k]!=='string'||!about[k].trim())||['aiLimits','privacy'].some(k=>!Array.isArray(about[k])||about[k].length!==4||about[k].some(item=>typeof item!=='string'||!item.trim()))||!Array.isArray(about.references)||about.references.length!==3||new Set(about.references.map(r=>r?.url)).size!==3||about.references.some(r=>typeof r?.label!=='string'||!r.label.trim()||!allowed.has(r.url)))errors.push('Invalid about copy or references');
   }
   if(catalog.humanSupport){
     const s=catalog.humanSupport;
