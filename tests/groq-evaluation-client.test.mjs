@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import http from 'node:http';
 import {createGroqStructuredClient, MODEL, ENDPOINT} from '../src/groq-evaluation-client.mjs';
 import {loadLessons,prepareLesson} from '../src/lesson-ai.mjs';
 const lessons=await loadLessons();
@@ -20,7 +21,7 @@ test('Trusted preparation, input, contact data and missing configuration block c
 
 test('Fixed endpoint, strict schema, minimal payload and safe metadata',async()=>{
  const result=await client(async(url,options)=>{
-  assert.equal(url,ENDPOINT);assert.equal(options.redirect,'error');assert.equal(options.headers.Authorization,'Bearer test-secret');
+  assert.equal(url,ENDPOINT);assert.equal(options.redirect,'manual');assert.equal(options.headers.Authorization,'Bearer test-secret');
   const body=JSON.parse(options.body);assert.equal(body.model,MODEL);assert.equal(body.max_completion_tokens,2048);assert.equal(body.stream,false);assert.equal(body.response_format.json_schema.strict,true);assert.equal(body.response_format.json_schema.schema.additionalProperties,false);
   assert.deepEqual(JSON.parse(body.messages[1].content),decision);assert.ok(!body.messages[1].content.includes('initial'));return response();
  })(input);
@@ -52,6 +53,21 @@ test('Rate limit is returned once without a retry or provider error body',async(
 test('HTTP and network failures return safe errors',async()=>{
  const httpResult=await client(async()=>new Response('test-secret',{status:401}))(input);assert.equal(httpResult.status,'unavailable');assert.equal(httpResult.http_status,401);
  const networkResult=await client(async()=>{throw Error('test-secret');})(input);assert.equal(networkResult.reason,'network_error');assert.ok(!JSON.stringify([httpResult,networkResult]).includes('test-secret'));
+});
+
+test('An actual HTTP redirect is rejected without forwarding the key or retrying',async()=>{
+ let forwarded=0,calls=0;
+ const destination=http.createServer((_request,res)=>{forwarded++;res.end('unexpected');});
+ const listen=server=>new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
+ await listen(destination);
+ const redirect=http.createServer((_request,res)=>{res.writeHead(302,{location:`http://127.0.0.1:${destination.address().port}/`});res.end('private upstream diagnostic');});
+ await listen(redirect);
+ try{
+  const result=await client(async(url,options)=>{calls++;assert.equal(url,ENDPOINT);return fetch(`http://127.0.0.1:${redirect.address().port}/`,options);})(input);
+  assert.equal(result.status,'unavailable');assert.equal(result.http_status,302);
+  assert.equal(calls,1);assert.equal(forwarded,0);
+  assert.ok(!JSON.stringify(result).includes('test-secret'));assert.ok(!JSON.stringify(result).includes('private upstream diagnostic'));
+ }finally{await Promise.all([redirect,destination].map(server=>new Promise(resolve=>server.close(resolve))));}
 });
 
 test('Per-instance request budget includes failed attempts',async()=>{

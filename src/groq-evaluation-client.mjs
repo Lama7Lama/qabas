@@ -38,7 +38,9 @@ export function createGroqStructuredClient({prepare, apiKey = globalThis.process
     const meta = () => ({model: MODEL, request_number: requestNumber, latency_ms: Date.now() - started});
     try {
       const response = await fetchImpl(ENDPOINT, {
-        method: 'POST', redirect: 'error', signal: combinedSignal,
+        // Workers rejects redirect:'error'. 'manual' preserves the same security
+        // boundary: 3xx is rejected below, never followed with the API key.
+        method: 'POST', redirect: 'manual', signal: combinedSignal,
         headers: {'Content-Type': 'application/json', Authorization: `Bearer ${apiKey.trim()}`},
         body: JSON.stringify({model: MODEL, temperature: 0, reasoning_effort: 'low', max_completion_tokens: prepared.maxCompletionTokens||1024, stream: false,
           messages: [{role: 'system', content: prepared.policy}, {role: 'user', content: JSON.stringify(payload)}],
