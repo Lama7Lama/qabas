@@ -1,0 +1,870 @@
+{
+  "schemaVersion": 1,
+  "topic": {
+    "id": "amanah",
+    "version": "2.3.0",
+    "title": "الباقي من المشتريات",
+    "value": "الأمانة",
+    "objective": "حفظ المال الذي عهد به إلى المتعلم، واحترام حدود الإذن.",
+    "refs": {
+      "intro": "story.intro",
+      "question": "prompt.choice",
+      "reason": "prompt.reason",
+      "extra": "story.extra",
+      "revise": "prompt.revise",
+      "choices": [
+        "choice.keep",
+        "choice.donate",
+        "choice.return"
+      ],
+      "followups": {
+        "small_amount": "followup.small_amount",
+        "effort_or_donation": "followup.effort_or_donation",
+        "permission": "followup.permission",
+        "clarify": "followup.clarify",
+        "general": "followup.general"
+      },
+      "comments": {
+        "keep": "comment.keep",
+        "donate": "comment.donate",
+        "return": "comment.return"
+      },
+      "explanation": "explanation.main",
+      "source": "source.quran-4-58",
+      "rubric": "rubric.transfer",
+      "transfer": "transfer.story",
+      "transferPrompt": "transfer.prompt",
+      "transferExample": "transfer.example",
+      "understandings": {
+        "small_amount": "understanding.small_amount",
+        "effort_or_donation": "understanding.effort_or_donation",
+        "permission": "understanding.permission"
+      },
+      "transferFeedback": {
+        "criteria": {
+          "permission": {
+            "definition": "feedback.permission.definition",
+            "strength": "feedback.permission.strength",
+            "addition": "feedback.permission.addition",
+            "concern": "feedback.permission.concern",
+            "question": "feedback.permission.question"
+          },
+          "deadline": {
+            "definition": "feedback.deadline.definition",
+            "strength": "feedback.deadline.strength",
+            "addition": "feedback.deadline.addition",
+            "concern": "feedback.deadline.concern",
+            "question": "feedback.deadline.question"
+          },
+          "step": {
+            "definition": "feedback.step.definition",
+            "strength": "feedback.step.strength",
+            "addition": "feedback.step.addition",
+            "concern": "feedback.step.concern",
+            "question": "feedback.step.question"
+          }
+        },
+        "clarification": "feedback.clarification"
+      },
+      "choiceAssessments": {
+        "keep": "assessment.choice.keep",
+        "donate": "assessment.choice.donate",
+        "return": "assessment.choice.return"
+      }
+    }
+  },
+  "provenance": {
+    "kind": "review_document",
+    "body_changes": "تصحيح معرّفات الخيارات واختصار تعليمات الكتابة؛ الموقف السادس صياغة وفق توجيه المختص.",
+    "review_scope": "evidence_only_as_reported_by_user"
+  },
+  "reviewScope": "اعتماد تحريري من صاحبة المشروع؛ مراجعة المختص للأدلة والمصادر وتوجيه الموقف السادس محفوظة منفصلة.",
+  "reviewInputSha256": "7e2f895fbf06c2bcbfc41937a2c66659b8b71be762f935aacb7868dc813db073",
+  "records": [
+    {
+      "id": "story.intro",
+      "kind": "story",
+      "text": "أنت ضمن فريق ينظم نشاطًا بمركز تعليمي. سلمك المسؤول ٢٠٠ ريال لشراء مستلزمات محددة، وقال: «أحتاج الفاتورة والباقي بعد الشراء».\n\nبلغت قيمة المشتريات ١٦٧ ريالًا، وبقي معك ٣٣ ريالًا. وعند خروجكما من المتجر، يقول زميلك الذي رافقك في المشوار:\n\n«قهوة من الباقي؟ تعبنا في المشوار».",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "7d949f7ac39534e6374195033470826c0bb0f5ba613bf2e9f901fabca5dbbb07"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "prompt.choice",
+      "kind": "prompt",
+      "text": "ما تصرفك؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "3d5a20a6c7bc4fc0fb60c6bbad0d0a2d921afbce0753e2f8a4b65c7252a227db"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "prompt.reason",
+      "kind": "prompt",
+      "text": "ما سبب اختيارك؟",
+      "version": 2,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "ba33bd71d4d50606abb4590971c29c35501762a62514d9671925688235d495e8"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "choice.keep",
+      "kind": "choice",
+      "text": "أشتري القهوة، وأرى أن جهدي في المشوار يمنحني الإذن باستخدام الباقي.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "6d464ff21d497088d9a949e64160b2b9194e9e89493fad51d181b6e2f6021005"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "value": "keep"
+    },
+    {
+      "id": "choice.donate",
+      "kind": "choice",
+      "text": "أتبرع بالباقي عن أصحاب المال دون الرجوع إليهم.",
+      "version": 2,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "891fd5886c85974c442ffe60f380afe965d6761e351ff5608eeb0997a3d83f28"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "value": "donate"
+    },
+    {
+      "id": "choice.return",
+      "kind": "choice",
+      "text": "أعيد الفاتورة والباقي كما اتفقنا، وأطلب إذنًا إن أردت استخدام شيء منه.",
+      "version": 2,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "d11a786229c69065d43396be69ea0e1fbc3782818a70db4640fbea736b0e4927"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "value": "return"
+    },
+    {
+      "id": "story.extra",
+      "kind": "story",
+      "text": "يقول الزميل: «المسؤول عادة لا يدقق في المبالغ الصغيرة»، لكن لم يصلك إذن جديد.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "4c7ba0a7f8f4659bdaccc967f5958f19af3833c7a7244b922142ac28e70d0278"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "prompt.revise",
+      "kind": "prompt",
+      "text": "هل يؤثر ذلك في قرارك؟ ولماذا؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "177bf1b7f181dffba113178ff6d60b3d5e7c4131686f5718e9362f81cad9b22f"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "followup.small_amount",
+      "kind": "followup",
+      "text": "إذا بقي مبلغ صغير مرة أخرى، كيف تتفق مسبقا على التصرف فيه؟",
+      "version": 2,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب متابعة تضيف زاوية جديدة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "cd43bfca2cffd268685b655b34bafbcf12f12c87d7d7ad92f5c5260b060bc529"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "condition": "إذا استند المتعلم إلى قلة المبلغ: «هل يغير صغر المبلغ الاتفاق الذي تسلمت المال على أساسه؟ ولماذا؟»"
+    },
+    {
+      "id": "followup.effort_or_donation",
+      "kind": "followup",
+      "text": "كيف يمكن طلب تعويض عن المشوار أو اقتراح التبرع، دون التصرف في الباقي قبل الحصول على الإذن؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "ca704367bbd99041463c697fa7b756723ffddcfea965c01324266da8891a734c"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "condition": "إذا استند إلى التعب أو التبرع: «كيف يمكن طلب تعويض عن المشوار أو اقتراح التبرع، دون التصرف في الباقي قبل الحصول على الإذن؟»"
+    },
+    {
+      "id": "followup.permission",
+      "kind": "followup",
+      "text": "إذا احتاج النشاط إلى مستلزمات إضافية، فما الخطوة التي تسبق استخدام الباقي لشرائها؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "38ec16476e07a4eff007555e756ab2c44720911cd5746e4e8c06edf0afe17004"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "condition": "إذا ذكر الإذن: «إذا احتاج النشاط إلى مستلزمات إضافية، فما الخطوة التي تسبق استخدام الباقي لشرائها؟»"
+    },
+    {
+      "id": "followup.clarify",
+      "kind": "followup",
+      "text": "ما الفكرة التي اعتمدت عليها في اختيارك؟ يمكنك كتابة: لا أعرف.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "509a30a374712a1094d6125aea235c34bb1586001de1fb5529a4bda3c546bc74"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "followup.general",
+      "kind": "followup",
+      "text": "هل يؤثر ذلك في قرارك؟ ولماذا؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "34c26e6c2ada214df276611bc9f1f4a09ae0f904d331b0b669dfaf72fe88c895"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "comment.keep",
+      "kind": "explanation",
+      "text": "الاتفاق لم يتضمن استخدام الباقي لنفقاتك؛ يحتاج ذلك إلى إذن من صاحب الصلاحية.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "5d02686344824b1a5cc7ed2d81d918c4bb46f7c718731ff71e77a61127406963"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.quran-4-58"
+      ]
+    },
+    {
+      "id": "comment.donate",
+      "kind": "explanation",
+      "text": "الغرض النافع لا يغني عن الرجوع إلى صاحب المال في كيفية التصرف فيه.",
+      "version": 2,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "5c7b88e2f7f027cc257923c30cb9b199a57799e7eff2d1c58a8515a77aab701c"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.quran-4-58"
+      ]
+    },
+    {
+      "id": "comment.return",
+      "kind": "explanation",
+      "text": "التزمت بما عهد إليك، وأبقيت قرار التصرف في الباقي لمن يملك الإذن.",
+      "version": 2,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "324d6dd34b02b31079a2abb0d4a913fe93c409159672ecab7198352e8f5a66aa"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.quran-4-58"
+      ]
+    },
+    {
+      "id": "explanation.main",
+      "kind": "explanation",
+      "text": "المال في هذه القصة سلم لغرض محدد، مع اتفاق على إعادة الباقي. احترام الأمانة هنا يشمل حفظه وإعادته، وطلب الإذن من صاحب الصلاحية قبل استخدامه لغرض آخر.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "63b74b7579e440269ba6271ea440bd345e615bb5b5133f43d02827b1f2e01077"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.quran-4-58"
+      ]
+    },
+    {
+      "id": "source.quran-4-58",
+      "kind": "source",
+      "text": "﴿إِنَّ اللَّهَ يَأْمُرُكُمْ أَنْ تُؤَدُّوا الْأَمَانَاتِ إِلَىٰ أَهْلِهَا﴾.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "evidence",
+        "hash": "ac6bfd82005c2afdb6dab42ed960b28e347e3a26b8199ad22733a04f08915142"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "citation": "مقتطف من سورة النساء، الآية ٥٨.",
+      "url": "https://quranpedia.net/tafsir/an-nisa/58",
+      "excerpt": true,
+      "verification": {
+        "status": "matched_to_reference",
+        "checked_on": "2026-10-05"
+      }
+    },
+    {
+      "id": "transfer.story",
+      "kind": "story",
+      "text": "أعارك صديقك آلة تصوير لفعالية، وطلب إعادتها مساء الجمعة. يتصل بك قريبك ويريد استعارتها يوم السبت، ويقول:\n\n«ما راح يدري، نرجعها بسرعة».\n\nلم يأذن صاحب الآلة بإعارتها إلى شخص آخر أو بتأخير إعادتها.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "6701b6da66cecadfe3ca9139eb00d34e51e653b84f49e82d65c46663082898cb"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "transfer.prompt",
+      "kind": "prompt",
+      "text": "ما ردك على قريبك؟ ولماذا؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "0f82c9a333174166af98be9ac435f36efd8ac7bd1c50411b4a5f52d82b296398"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "transfer.example",
+      "kind": "example",
+      "text": "«أعيد الآلة إلى صاحبها في الموعد المتفق عليه، وأطلب من قريبي التواصل معه إن أراد استعارتها؛ فوجودها معي لا يمنحني الإذن بإعارتها لشخص آخر أو تمديد مدة استعارتها».",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "904398e0c03f07de88596e85fe54127dd974fbef4259218366378a3206e05e4c"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.quran-4-58"
+      ]
+    },
+    {
+      "id": "rubric.transfer",
+      "kind": "rubric",
+      "text": "يميز المتعلم بين وجود الشيء بحوزته وبين حق التصرف فيه.\nيراعي الاتفاق الذي تسلم المال أو الشيء على أساسه.\nيقترح إعادة الحق أو طلب إذن صريح من صاحبه أو ممن يملك صلاحية الإذن.\nلا تعمم أحكام هذه الواقعة المحددة على مسائل التعويض أو الحقوق المتنازع عليها.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "c8aad1ccd188fa979b53c21cc5d001dab2f4465e834902b668e8c5f0ed4b7c9b"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.quran-4-58"
+      ]
+    },
+    {
+      "id": "understanding.small_amount",
+      "kind": "explanation",
+      "text": "ترى أن صغر المبلغ يجعل استخدام الباقي مقبولا.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "4757c126202e5c882485fa075fdb47f037f774cffe179ffb10aac73a0a1b65fa"
+      }
+    },
+    {
+      "id": "understanding.effort_or_donation",
+      "kind": "explanation",
+      "text": "ترى أن الجهد أو الغرض النافع يبرر التصرف في الباقي.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "0d182ffdf87db9891d1d700480db28c57e86c27871c2d2357688066db46fa2ae"
+      }
+    },
+    {
+      "id": "understanding.permission",
+      "kind": "explanation",
+      "text": "تربط التصرف في المال بالإذن والاتفاق مع صاحبه.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "4037dd63bfa926dcf3efeb8e6492068bb57efb01bfd50732403aa221162400b8"
+      }
+    },
+    {
+      "id": "feedback.clarification",
+      "kind": "prompt",
+      "text": "هل ستعيد الآلة في الموعد، أم تطلب إذنا من صاحبها؟ وضح خطوتك.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "e26d28f07f04c34577b1dc4a7bec2a71b49f21fc4762e48a755a80736ebfb673"
+      }
+    },
+    {
+      "id": "feedback.permission.definition",
+      "kind": "rubric",
+      "text": "يميز بين حيازة الآلة وحق إعارتها؛ يرفض إعارتها دون إذن أو يشترط موافقة صاحبها. الاستئذان المشروط ليس إعارة بلا إذن. supported يعني اقتراحا يوافق هذا المعيار، وليس مجرد التعرف على كلمات المعيار. opposed: يقترح إعارة الكاميرا دون إذن المالك أو رغم رفضه.",
+      "version": "2.2.1",
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "c40bfc55d282df4fa9a1c86d8fa3c8c579eafad71b79acf96568abc01d3acf34"
+      }
+    },
+    {
+      "id": "feedback.permission.strength",
+      "kind": "explanation",
+      "text": "راعيت أن وجود الآلة معك لا يمنحك حق إعارتها دون إذن.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "3ef91111bffec44e6787ef8ebf1f61fd8e1f5d8de4efd2934dc424eaf14c6011"
+      }
+    },
+    {
+      "id": "feedback.permission.addition",
+      "kind": "explanation",
+      "text": "يمكنك توضيح حدود إذن صاحب الآلة قبل إعارتها لقريبك.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "eb232b74404f644a3be7474463d8459ee85208a254dcc11899bc9ae90d377726"
+      }
+    },
+    {
+      "id": "feedback.permission.concern",
+      "kind": "explanation",
+      "text": "في هذه القصة لم يأذن صاحب الآلة بإعارتها إلى شخص آخر.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "29db9559d9fd2395d73760223e930b246a865e355a0e95dbcd7a2515c9267bd6"
+      }
+    },
+    {
+      "id": "feedback.permission.question",
+      "kind": "prompt",
+      "text": "ممن تحتاج الإذن قبل إعارتها؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "76d6d781750d00e70d946b20fd9e0b0cb040ceda320aa92ea070e986aea956b4"
+      }
+    },
+    {
+      "id": "feedback.deadline.definition",
+      "kind": "rubric",
+      "text": "يراعي موعد الجمعة أو الموعد المتفق عليه؛ طلب تعديل الموعد بموافقة المالك ليس تجاهلا للاتفاق. غياب ذكر الموعد لا يثبت عدم فهمه. supported يعني اقتراحا يوافق هذا المعيار، وليس مجرد التعرف على كلمات المعيار. opposed: يصرح بتأخير الإعادة عن الموعد دون موافقة المالك أو رغم رفضه.",
+      "version": "2.2.1",
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "01700d6f1d96bbc8d35800aa8a6730dd9ba074f0907152ee497d04c0b53358a8"
+      }
+    },
+    {
+      "id": "feedback.deadline.strength",
+      "kind": "explanation",
+      "text": "راعيت موعد الإعادة أو جعلت تغييره مشروطا بموافقة صاحب الآلة.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "7720c010e186e4bd1c6c45b80d4b226a8319ada3655dca30652adb6194f509e1"
+      }
+    },
+    {
+      "id": "feedback.deadline.addition",
+      "kind": "explanation",
+      "text": "يمكنك إضافة كيف ستراعي موعد الإعادة المتفق عليه.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "f09fbb5e1bdeba49abdb4c00242d8982457509ef4fecb5a76360463e3a78f96e"
+      }
+    },
+    {
+      "id": "feedback.deadline.concern",
+      "kind": "explanation",
+      "text": "تغيير موعد الإعادة يحتاج الرجوع إلى صاحب الآلة.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "796e3722db22c9fc31d0b0ed9454ac4693aa55940e91c18e7f5eefb04eb13874"
+      }
+    },
+    {
+      "id": "feedback.deadline.question",
+      "kind": "prompt",
+      "text": "كيف ستراعي موعد الإعادة؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "b9f8014966152acada418bb92cf25f63b3bee7f66e4aec9b46467e270151c3ff"
+      }
+    },
+    {
+      "id": "feedback.step.definition",
+      "kind": "rubric",
+      "text": "يقترح إعادة الآلة أو الرجوع لمالكها أو توجيه القريب للتواصل معه؛ تقبل بدائل تحفظ الإذن والاتفاق. supported يعني اقتراحا يوافق هذا المعيار، وليس مجرد التعرف على كلمات المعيار. opposed: يقترح إخفاء التصرف أو تجاوز صاحب الكاميرا؛ لا يعد هذا خطوة تحفظ الحق لمجرد أنه خطوة عملية.",
+      "version": "2.2.1",
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "118a3ddc8d56514ab303710333c31e0e1c8bb1bc6f5ba52feaeb60bb67b2e990"
+      }
+    },
+    {
+      "id": "feedback.step.strength",
+      "kind": "explanation",
+      "text": "ذكرت خطوة عملية تحفظ حق صاحب الآلة.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "40407b911dce333f00d89dba767d762124973f07eda4327a92d869a98e7654b0"
+      }
+    },
+    {
+      "id": "feedback.step.addition",
+      "kind": "explanation",
+      "text": "يمكنك توضيح الخطوة التي ستتخذها مع قريبك وصاحب الآلة.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "7dc88b077edfa2e5aab46a866d9a33cfeb684ff6f2fca40ef89d9656e00e7301"
+      }
+    },
+    {
+      "id": "feedback.step.concern",
+      "kind": "explanation",
+      "text": "إخفاء التصرف عن صاحب الآلة لا يعالج غياب الإذن.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "6e293936004151eade4dfd5ac9d369158e0991ed0a5baca1f9b61664cb2be812"
+      }
+    },
+    {
+      "id": "feedback.step.question",
+      "kind": "prompt",
+      "text": "ما الخطوة العملية المناسبة مع قريبك؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "1f98614134d3cce81daf5de75b6715d1614f99aa86c000371ad99c4c3cd7d3ce"
+      }
+    },
+    {
+      "id": "assessment.choice.keep",
+      "kind": "rubric",
+      "value": "needs_correction",
+      "text": "التصرف المختار يحتاج مراجعة",
+      "version": 1,
+      "status": "draft",
+      "sourceIds": [
+        "source.quran-4-58"
+      ],
+      "rights": {
+        "status": "cleared",
+        "origin": "Original project assessment labels; new educational criteria await separate scientific review."
+      }
+    },
+    {
+      "id": "assessment.choice.donate",
+      "kind": "rubric",
+      "value": "needs_correction",
+      "text": "التصرف المختار يحتاج مراجعة",
+      "version": 1,
+      "status": "draft",
+      "sourceIds": [
+        "source.quran-4-58"
+      ],
+      "rights": {
+        "status": "cleared",
+        "origin": "Original project assessment labels; new educational criteria await separate scientific review."
+      }
+    },
+    {
+      "id": "assessment.choice.return",
+      "kind": "rubric",
+      "value": "appropriate",
+      "text": "التصرف المختار مناسب لهذا الموقف",
+      "version": 1,
+      "status": "draft",
+      "sourceIds": [
+        "source.quran-4-58"
+      ],
+      "rights": {
+        "status": "cleared",
+        "origin": "Original project assessment labels; new educational criteria await separate scientific review."
+      }
+    }
+  ],
+  "editorialAdoption": {
+    "by": "صاحبة المشروع",
+    "date": "2026-10-05",
+    "scope": "اعتماد المحتوى في تجربة التطوير وتنقيح الواجهة وربط المواقف الستة."
+  },
+  "religiousReview": {
+    "basis": "ملف المراجعة وتأكيد صاحبة المشروع",
+    "file": "قبس — للمراجعة الشرعية.pdf",
+    "sha256": "109e844053a0d67978a926a5e83fe459debd32aca4064f8b3867a76a730aec9e",
+    "scope": "الأدلة والمصادر وتوجيه تغيير موضوع الموقف السادس؛ لا ينسب اعتماد تحريري جديد إلى المختص."
+  },
+  "personalFeedbackScope": "تعليق تعليمي مقيد بمعيار الموقف، دون درجة أو حكم على التدين. الصياغات والمعيار مشتقان من المحتوى؛ لا ينسب اعتماد علمي جديد للمختص."
+}

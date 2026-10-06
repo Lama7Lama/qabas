@@ -1,0 +1,870 @@
+{
+  "schemaVersion": 1,
+  "topic": {
+    "id": "ghibah",
+    "version": "2.3.0",
+    "title": "حديث عن صديق غائب",
+    "value": "اجتناب الغيبة",
+    "objective": "التمييز بين صدق الوصف وبين جواز ذكر الغائب بما يكره في سياق السخرية.",
+    "refs": {
+      "intro": "story.intro",
+      "question": "prompt.choice",
+      "reason": "prompt.reason",
+      "extra": "story.extra",
+      "revise": "prompt.revise",
+      "choices": [
+        "choice.refuse",
+        "choice.repeat",
+        "choice.add_mockery"
+      ],
+      "followups": {
+        "truth_justification": "followup.truth_justification",
+        "social_pressure": "followup.social_pressure",
+        "principle": "followup.principle",
+        "clarify": "followup.clarify",
+        "general": "followup.general"
+      },
+      "comments": {
+        "refuse": "comment.refuse",
+        "repeat": "comment.repeat",
+        "add_mockery": "comment.add_mockery"
+      },
+      "explanation": "explanation.main",
+      "source": "source.quran-49-12",
+      "rubric": "rubric.transfer",
+      "transfer": "transfer.story",
+      "transferPrompt": "transfer.prompt",
+      "transferExample": "transfer.example",
+      "understandings": {
+        "truth_justification": "understanding.truth_justification",
+        "social_pressure": "understanding.social_pressure",
+        "principle": "understanding.principle"
+      },
+      "transferFeedback": {
+        "criteria": {
+          "truth": {
+            "definition": "feedback.truth.definition",
+            "strength": "feedback.truth.strength",
+            "addition": "feedback.truth.addition",
+            "concern": "feedback.truth.concern",
+            "question": "feedback.truth.question"
+          },
+          "dignity": {
+            "definition": "feedback.dignity.definition",
+            "strength": "feedback.dignity.strength",
+            "addition": "feedback.dignity.addition",
+            "concern": "feedback.dignity.concern",
+            "question": "feedback.dignity.question"
+          },
+          "alternative": {
+            "definition": "feedback.alternative.definition",
+            "strength": "feedback.alternative.strength",
+            "addition": "feedback.alternative.addition",
+            "concern": "feedback.alternative.concern",
+            "question": "feedback.alternative.question"
+          }
+        },
+        "clarification": "feedback.clarification"
+      },
+      "choiceAssessments": {
+        "refuse": "assessment.choice.refuse",
+        "repeat": "assessment.choice.repeat",
+        "add_mockery": "assessment.choice.add_mockery"
+      }
+    }
+  },
+  "provenance": {
+    "kind": "review_document",
+    "body_changes": "تصحيح معرّفات الخيارات واختصار تعليمات الكتابة؛ الموقف السادس صياغة وفق توجيه المختص.",
+    "review_scope": "evidence_only_as_reported_by_user"
+  },
+  "reviewScope": "اعتماد تحريري من صاحبة المشروع؛ مراجعة المختص للأدلة والمصادر وتوجيه الموقف السادس محفوظة منفصلة.",
+  "reviewInputSha256": "7e2f895fbf06c2bcbfc41937a2c66659b8b71be762f935aacb7868dc813db073",
+  "records": [
+    {
+      "id": "story.intro",
+      "kind": "story",
+      "text": "أنت في الاستراحة مع أربعة من أصدقائك بعد العشاء. يبدأ أحد الحاضرين بتقليد طريقة كلام صاحبكم الغائب الليلة، ونبرة صوته حين يتحدث عن عمله، ويضحك الجميع. ثم يقول أحدهم:\n\n«والله ما قلنا إلا الصدق، هذه طريقته فعلًا».\n\nويلتفت الجميع إليك منتظرين مشاركتك.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "3325ea21a643c439ff1798cab1f60837ec8955187d6b5cbaf93d8b173b4746cd"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "prompt.choice",
+      "kind": "prompt",
+      "text": "ما تصرفك؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "3d5a20a6c7bc4fc0fb60c6bbad0d0a2d921afbce0753e2f8a4b65c7252a227db"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "prompt.reason",
+      "kind": "prompt",
+      "text": "ما سبب اختيارك؟",
+      "version": 2,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "ba33bd71d4d50606abb4590971c29c35501762a62514d9671925688235d495e8"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "choice.refuse",
+      "kind": "choice",
+      "text": "أقول بلطف: «لو سمع صاحبنا هذا الكلام لتضايق، خلونا نرجع لموضوعنا الأول».",
+      "version": 2,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "7c2330c9b154d41a0d3283c9d92601dce26e1953605a4d12ed898ddc15524b12"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "value": "refuse"
+    },
+    {
+      "id": "choice.repeat",
+      "kind": "choice",
+      "text": "أضحك وأشاركهم بتقليد آخر، ما دام الذي نقوله صحيحًا.",
+      "version": 2,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "6d69e5ff2cc64b756c224d43745836adccf2a904a9259d75711136c4a0a7bd11"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "value": "repeat"
+    },
+    {
+      "id": "choice.add_mockery",
+      "kind": "choice",
+      "text": "أحكي موقفًا محرجًا حصل له قبل أشهر حتى لا أكتفي بالسكوت.",
+      "version": 2,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "ad75a3c72e300a7a218ef266b7fa8098f986a3d51f0a7f52599fe1507c341777"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "value": "add_mockery"
+    },
+    {
+      "id": "story.extra",
+      "kind": "story",
+      "text": "يقول أحد الأصدقاء: «تضايق يوم قلدناه قدامه، بس هو مو موجود الآن».",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "5390d837f59fd8aff41c8190b595002fec421ef911fd6e841ae6455f7633511f"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "prompt.revise",
+      "kind": "prompt",
+      "text": "هل يبقى قرارك كما هو أم يتغير؟ ولماذا؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "5cec0e21dd1eb3c87fda61d62d0c69a3087c67ca466f1262634cc1786f6744aa"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "followup.truth_justification",
+      "kind": "followup",
+      "text": "لو طلب أحدهم إعادة إرسال الصورة إلى مجموعة أخرى، ما التصرف الذي يقلل أثر السخرية؟",
+      "version": 2,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب متابعة تضيف زاوية جديدة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "1acc23630648fba94a71dd5c01465c0a0a45cdc92a6d757fc03a2b2c70e9dbc4"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "condition": "إذا برر المتعلم المشاركة بصحة الكلام: «لو كانت التفاصيل صحيحة، وكان صاحبكم يكره ذكرها للتسلية، فهل يكفي صدقها لتبرير تداولها؟»"
+    },
+    {
+      "id": "followup.social_pressure",
+      "kind": "followup",
+      "text": "ما الرد القصير الذي يوضح الامتناع عن المشاركة ويقترح موضوعًا آخر دون إهانة أحد؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "df61c134171f84203d8000728639f1d2c381d91cfadb4690a196259dcf3c026d"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "condition": "إذا خاف من إحراج الأصدقاء: «ما الرد القصير الذي يوضح الامتناع عن المشاركة ويقترح موضوعًا آخر دون إهانة أحد؟»"
+    },
+    {
+      "id": "followup.principle",
+      "kind": "followup",
+      "text": "لو انتقل الحديث إلى مجموعة مراسلة بدل المجلس، فهل يتغير سبب الامتناع؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "f04e1b21fbca52af48a74c56a561aa4d3a217cca2e6b87d9fc3b941566b0a729"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "condition": "إذا ميز المبدأ: «لو انتقل الحديث إلى مجموعة مراسلة بدل المجلس، فهل يتغير سبب الامتناع؟»"
+    },
+    {
+      "id": "followup.clarify",
+      "kind": "followup",
+      "text": "ما الفكرة التي اعتمدت عليها في اختيارك؟ يمكنك كتابة: لا أعرف.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "509a30a374712a1094d6125aea235c34bb1586001de1fb5529a4bda3c546bc74"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "followup.general",
+      "kind": "followup",
+      "text": "هل يبقى قرارك كما هو أم يتغير؟ ولماذا؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "d67047470c27f1de3203f0830e26fa96aba1dd1157d97967c0f72735a20e2194"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "comment.refuse",
+      "kind": "explanation",
+      "text": "امتنعت عن المشاركة ونبهت إلى ما يؤذي صاحبكم، مع اقتراح تغيير الحديث.",
+      "version": 2,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "9f1bad6de0149c3bda3c6a5ab9b4108f4ab620eb923205d0126168c927dbca10"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.quran-49-12"
+      ]
+    },
+    {
+      "id": "comment.repeat",
+      "kind": "explanation",
+      "text": "صحة الوصف لا تبيح هذا النوع من الحديث عن الغائب بما يكره.",
+      "version": 2,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "84543e0b9d9177638a9b556bc016bd9817d67913324749fb1ac03fe64b4e28af"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.quran-49-12"
+      ]
+    },
+    {
+      "id": "comment.add_mockery",
+      "kind": "explanation",
+      "text": "ذكر موقف محرج للتسلية يضيف إلى الحديث الذي يتضايق منه الغائب.",
+      "version": 2,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "0a24692ed4e468ed6de761eea614b5b631521dff6d35d2541be5e14a3d7b51ec"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.quran-49-12"
+      ]
+    },
+    {
+      "id": "explanation.main",
+      "kind": "explanation",
+      "text": "في هذا المشهد يذكر غائب بما يكره على سبيل التسلية. صدق التفاصيل لا يبيح ذلك. يمكنك الامتناع عن المشاركة وتوجيه الحديث إلى موضوع آخر.\n\nتختلف هذه الحالة عن التظلم وطلب المساعدة لرفع ضرر؛ ولهذه الحالات ضوابط وتفصيل.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "6cdc5e1d53f9ab35b1630bb1151e05abd27e216f5e1eeb3d1751ddfafe1b22ae"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.quran-49-12"
+      ]
+    },
+    {
+      "id": "source.quran-49-12",
+      "kind": "source",
+      "text": "(يَا أَيُّهَا الَّذِينَ آمَنُوا اجْتَنِبُوا كَثِيرًا مِّنَ الظَّنِّ إِنَّ بَعْضَ الظَّنِّ إِثْمٌ ۖ وَلَا تَجَسَّسُوا وَلَا يَغْتَب بَّعْضُكُم بَعْضًا ۚ أَيُحِبُّ أَحَدُكُمْ أَن يَأْكُلَ لَحْمَ أَخِيهِ مَيْتًا فَكَرِهْتُمُوهُ ۚ وَاتَّقُوا اللَّهَ ۚ إِنَّ اللَّهَ تَوَّابٌ رَّحِيمٌ )",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "evidence",
+        "hash": "8941d6c222de8e4e97a9c3745bd6f84e8bdcc4aec17b785ed296b23221225d25"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "citation": "سورة الحجرات، الآية ١٢؛ الآية كاملة.",
+      "url": "https://quran.ksu.edu.sa/tafseer/saadi/sura49-aya12.html",
+      "excerpt": false,
+      "verification": {
+        "status": "matched_to_reference",
+        "checked_on": "2026-10-05"
+      }
+    },
+    {
+      "id": "transfer.story",
+      "kind": "story",
+      "text": "يرسل أحد الزملاء إلى مجموعة العمل الصغيرة صورة لحذاء زميلكم الغائب اليوم، ويعلق ساخرًا من ذوقه. تعرفون الزميل جميعًا. يقترح أحد الأعضاء إضافة تعليق مضحك، ثم يقول:\n\n«لكن الصورة حقيقية».",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "75c85e101adb145123ad2370790b86cc9f80142e1796016ad27ae928aeda4939"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "transfer.prompt",
+      "kind": "prompt",
+      "text": "ما ردك أو تصرفك؟ ولماذا؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "c63acef7d856b45c28c9a66fa5574ec11ff0149a950f2c09b85f3bcd8bbcf066"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "transfer.example",
+      "kind": "example",
+      "text": "«لا أضيف تعليقًا ساخرًا ولا أعيد إرسال الصورة، وأكتب: خلونا نترك التعليقات على أغراض زميلنا ونرجع لموضوع العمل؛ فكون الصورة حقيقية لا يبرر السخرية منه في غيابه».",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "aa6ee2bed7945a54281b4f37c58784a557780ef8adbb8f70566907d91f1b7808"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.quran-49-12"
+      ]
+    },
+    {
+      "id": "rubric.transfer",
+      "kind": "rubric",
+      "text": "يلاحظ المتعلم أن صدق الوصف ليس مبررًا لهذا الحديث.\nيراعي ما يكرهه الغائب.\nيقترح تصرفًا لا يزيد السخرية أو تداولها.\nإذا تحدث المتعلم عن شكوى لرفع ظلم، فلا يصنفها النموذج تلقائيًا غيبة، بل يوضح اختلافها عن سياق التسلية.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "5c084aae3bb25aac5a93fda9c361a1b2b4586cea87475facc052a391fdb1418d"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.quran-49-12"
+      ]
+    },
+    {
+      "id": "understanding.truth_justification",
+      "kind": "explanation",
+      "text": "ترى أن صحة التفاصيل تبرر المشاركة في الحديث عن الغائب.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "634e08a3fa45798d498b10f09524454d6457747bd82c3d5c31e71c8512589716"
+      }
+    },
+    {
+      "id": "understanding.social_pressure",
+      "kind": "explanation",
+      "text": "تريد الامتناع عن السخرية مع تجنب إحراج أصدقائك.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "f7eec6dfca9cc482040bcf552fe46553e8b5a0e2dbb01a3a00fa802a8c01563c"
+      }
+    },
+    {
+      "id": "understanding.principle",
+      "kind": "explanation",
+      "text": "ترى أن صدق الكلام لا يبرر ذكر الغائب بما يكره للتسلية.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "1da181b859fc4f350953d68ee5ca0473af487e1577d4e4c9e6b449f5e357edb6"
+      }
+    },
+    {
+      "id": "feedback.clarification",
+      "kind": "prompt",
+      "text": "ما ردك على اقتراح التعليق الساخر، وما سبب هذا الرد؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "45e608fd0443f363368fc42c0b929f873657e9bb32eefea156107d40d0052ac6"
+      }
+    },
+    {
+      "id": "feedback.truth.definition",
+      "kind": "rubric",
+      "text": "يذكر أن حقيقة الصورة أو صحة الوصف لا يبرران السخرية من الغائب. لا يكفي مجرد الامتناع لإثبات أنه ذكر هذا التمييز، ولا يعاقب غياب ذكره. supported يعني اقتراحا يوافق هذا المعيار، وليس مجرد التعرف على كلمات المعيار. opposed: يتبنى صراحة أن حقيقة الصورة تبرر السخرية.",
+      "version": "2.2.1",
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "ca6a47fcf964b312ce42311dfb156f521f73bcd78d9947a43565b05c4dcaa2a3"
+      }
+    },
+    {
+      "id": "feedback.truth.strength",
+      "kind": "explanation",
+      "text": "ميزت بين حقيقة الصورة وبين تبرير السخرية بها.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "afed4be8b8ca95a6dd40b01c37570549ecb31ad2a1d186de6020ec318dddc036"
+      }
+    },
+    {
+      "id": "feedback.truth.addition",
+      "kind": "explanation",
+      "text": "يمكنك توضيح لماذا لا تكفي حقيقة الصورة لتبرير التعليق الساخر.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "d539d758b31d81a7466e308fbe154da7497b9e5726d2d4e145964a40f1208847"
+      }
+    },
+    {
+      "id": "feedback.truth.concern",
+      "kind": "explanation",
+      "text": "حقيقة الصورة لا تجعل السخرية من زميل غائب مقبولة في هذا الموقف.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "75dfb3b5c537e945fabb1561de521c43adbf0d11ca61e2a864bbf2cfc0fc8ca5"
+      }
+    },
+    {
+      "id": "feedback.truth.question",
+      "kind": "prompt",
+      "text": "هل حقيقة الصورة وحدها تبرر التعليق الساخر؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "edda1cff987db1d98de8b684638b20faa57aaa0875cd923f15dcc38ac598f5ef"
+      }
+    },
+    {
+      "id": "feedback.dignity.definition",
+      "kind": "rubric",
+      "text": "يراعي ما يكرهه الغائب أو يرفض إيذاءه أو السخرية منه؛ لا يستنتج حكما على إيمان أحد. الشكوى لرفع ظلم مختلفة عن سياق التسلية، وتخرج من تقييم هذه القصة. supported يعني اقتراحا يوافق هذا المعيار، وليس مجرد التعرف على كلمات المعيار. opposed: يقترح السخرية من الغائب أو يقر بإيذائه ويقبله. مجرد الإقرار بأنه سيكرهها مع الاستمرار ليس مراعاة لأثرها.",
+      "version": "2.2.1",
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "f010a049f0946ac189fdaae20b220baa83010a13c9a11b9336679a90d8281f38"
+      }
+    },
+    {
+      "id": "feedback.dignity.strength",
+      "kind": "explanation",
+      "text": "راعيت أثر السخرية على زميلك الغائب.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "edae608a2604c6468688bfc8d43922b7fd8a6754c2c8e6b8290d26b58608d7c9"
+      }
+    },
+    {
+      "id": "feedback.dignity.addition",
+      "kind": "explanation",
+      "text": "يمكنك توضيح أثر التعليق على زميلك الغائب.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "d4c6707b5529ed7545c91fe3b87085aca3369271d39deac6674427854d810836"
+      }
+    },
+    {
+      "id": "feedback.dignity.concern",
+      "kind": "explanation",
+      "text": "الموقف هنا يتعلق بالتسلية على حساب الغائب، وليس بطلب مساعدة لرفع ظلم.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "a2379bf4be2d0b66733f24a835a921eb6d6a8dfba1b32fa3a81cf9dc5ad2a25a"
+      }
+    },
+    {
+      "id": "feedback.dignity.question",
+      "kind": "prompt",
+      "text": "كيف قد يتأثر زميلك بهذا التعليق؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "0c44eec1f9812d1d4e991fbc21ed5e5219818dab51c9d5e62a6f28d60cb5b64a"
+      }
+    },
+    {
+      "id": "feedback.alternative.definition",
+      "kind": "rubric",
+      "text": "يمتنع عن التعليق الساخر أو إعادة إرسال الصورة، أو يقترح تغيير الحديث؛ عدم إعادة الإرسال ليس تعهدا بمنع كل تداول مشروع. supported يعني اقتراحا يوافق هذا المعيار، وليس مجرد التعرف على كلمات المعيار. opposed: يقترح التعليق الساخر أو إعادة إرسال الصورة لتوسيع السخرية؛ لا يصنف ذلك not_shown لمجرد أنه لم يذكر بديلا.",
+      "version": "2.2.1",
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "e252546de79e7e6e6147671fced6493d0a48d543b74abb7a2e840ef4720cbde5"
+      }
+    },
+    {
+      "id": "feedback.alternative.strength",
+      "kind": "explanation",
+      "text": "اقترحت تصرفا لا يزيد السخرية أو تداولها.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "325c6d56a7b833aa209ade3fdc74fbc9cb043401e3afa711db1f8dcf48285f2c"
+      }
+    },
+    {
+      "id": "feedback.alternative.addition",
+      "kind": "explanation",
+      "text": "يمكنك إضافة تصرف عملي يوقف السخرية أو يعيد الحديث إلى العمل.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "1f33966c4b962e84d8cb1d43353b20ef6a219265a5166ec032a9c2651546c00e"
+      }
+    },
+    {
+      "id": "feedback.alternative.concern",
+      "kind": "explanation",
+      "text": "إضافة تعليق ساخر أو توسيع إرسال الصورة تزيد أثر السخرية في هذا الموقف.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "e9bf7adab5de474961f327ad2f96b61df7673b4c9d650880d79594a59ac86152"
+      }
+    },
+    {
+      "id": "feedback.alternative.question",
+      "kind": "prompt",
+      "text": "ما التصرف الذي يقلل تداول السخرية؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "96af6edb92ce7f01043b44a06a60eb71ee3a81c6c9d82b652caf63102c1bdbdf"
+      }
+    },
+    {
+      "id": "assessment.choice.refuse",
+      "kind": "rubric",
+      "value": "appropriate",
+      "text": "التصرف المختار مناسب لهذا الموقف",
+      "version": 1,
+      "status": "draft",
+      "sourceIds": [
+        "source.quran-49-12"
+      ],
+      "rights": {
+        "status": "cleared",
+        "origin": "Original project assessment labels; new educational criteria await separate scientific review."
+      }
+    },
+    {
+      "id": "assessment.choice.repeat",
+      "kind": "rubric",
+      "value": "needs_correction",
+      "text": "التصرف المختار يحتاج مراجعة",
+      "version": 1,
+      "status": "draft",
+      "sourceIds": [
+        "source.quran-49-12"
+      ],
+      "rights": {
+        "status": "cleared",
+        "origin": "Original project assessment labels; new educational criteria await separate scientific review."
+      }
+    },
+    {
+      "id": "assessment.choice.add_mockery",
+      "kind": "rubric",
+      "value": "needs_correction",
+      "text": "التصرف المختار يحتاج مراجعة",
+      "version": 1,
+      "status": "draft",
+      "sourceIds": [
+        "source.quran-49-12"
+      ],
+      "rights": {
+        "status": "cleared",
+        "origin": "Original project assessment labels; new educational criteria await separate scientific review."
+      }
+    }
+  ],
+  "editorialAdoption": {
+    "by": "صاحبة المشروع",
+    "date": "2026-10-05",
+    "scope": "اعتماد المحتوى في تجربة التطوير وتنقيح الواجهة وربط المواقف الستة."
+  },
+  "religiousReview": {
+    "basis": "ملف المراجعة وتأكيد صاحبة المشروع",
+    "file": "قبس — للمراجعة الشرعية.pdf",
+    "sha256": "109e844053a0d67978a926a5e83fe459debd32aca4064f8b3867a76a730aec9e",
+    "scope": "الأدلة والمصادر وتوجيه تغيير موضوع الموقف السادس؛ لا ينسب اعتماد تحريري جديد إلى المختص."
+  },
+  "personalFeedbackScope": "تعليق تعليمي مقيد بمعيار الموقف، دون درجة أو حكم على التدين. الصياغات والمعيار مشتقان من المحتوى؛ لا ينسب اعتماد علمي جديد للمختص."
+}

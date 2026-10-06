@@ -1,0 +1,916 @@
+{
+  "schemaVersion": 1,
+  "topic": {
+    "id": "tathabbut",
+    "version": "2.3.0",
+    "title": "رسالة بلا مصدر",
+    "value": "التثبت",
+    "refs": {
+      "intro": "story.intro",
+      "message": "story.message",
+      "missing": "story.missing",
+      "question": "prompt.choice",
+      "reason": "prompt.reason",
+      "extra": "story.extra",
+      "revise": "prompt.revise",
+      "choices": [
+        "choice.share",
+        "choice.verify",
+        "choice.wait"
+      ],
+      "followups": {
+        "circulation": "followup.circulation",
+        "source_context": "followup.source_context",
+        "caution": "followup.caution",
+        "clarify": "followup.general",
+        "general": "followup.general"
+      },
+      "comments": {
+        "share": "comment.share",
+        "verify": "comment.verify",
+        "wait": "comment.wait"
+      },
+      "explanation": "explanation.main",
+      "source": "source.49.6",
+      "rubric": "rubric.transfer",
+      "transfer": "transfer.story",
+      "transferPrompt": "transfer.prompt",
+      "transferExample": "transfer.example",
+      "revisedQuestion": "prompt.revised-choice",
+      "aboutBody": "about.what.body",
+      "understandings": {
+        "circulation": "understanding.circulation",
+        "source_context": "understanding.source_context",
+        "caution": "understanding.caution"
+      },
+      "transferFeedback": {
+        "criteria": {
+          "source": {
+            "definition": "feedback.source.definition",
+            "strength": "feedback.source.strength",
+            "addition": "feedback.source.addition",
+            "concern": "feedback.source.concern",
+            "question": "feedback.source.question"
+          },
+          "year": {
+            "definition": "feedback.year.definition",
+            "strength": "feedback.year.strength",
+            "addition": "feedback.year.addition",
+            "concern": "feedback.year.concern",
+            "question": "feedback.year.question"
+          },
+          "deadline": {
+            "definition": "feedback.deadline.definition",
+            "strength": "feedback.deadline.strength",
+            "addition": "feedback.deadline.addition",
+            "concern": "feedback.deadline.concern",
+            "question": "feedback.deadline.question"
+          }
+        },
+        "clarification": "feedback.clarification"
+      },
+      "choiceAssessments": {
+        "share": "assessment.choice.share",
+        "verify": "assessment.choice.verify",
+        "wait": "assessment.choice.wait"
+      }
+    }
+  },
+  "records": [
+    {
+      "id": "story.intro",
+      "kind": "story",
+      "text": "أنت في مجموعة تطوعية على واتساب تنظم فعالية للحي، وموعدها غدًا مساءً. وبينما ينشغل الجميع بتجهيز الكراسي والتوزيعات، تصلك رسالة معاد توجيهها:",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "62cdfa350e2ca9b527299a6134d7eab10f172ea9fa1fcdeaaa6a56ac5db51c4e"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "story.message",
+      "kind": "story",
+      "text": "«يقال إن فعالية الغد ألغيت. أبلغوا الجميع قبل أن يستعدوا للحضور».",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "abf3267aeb9ede616f3ee4271c301f5b0dc6ea2d91037493ddce990ba36dda5e"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "story.missing",
+      "kind": "story",
+      "text": "لا تتضمن الرسالة رابطًا ولا إعلانًا من الجهة المنظمة، ولا يعرف من كتبها أصلًا.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "bb72fe4cc480654974e017a394a812b1f61b9e063c937d6b39a5361d1df175f4"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "prompt.choice",
+      "kind": "prompt",
+      "text": "ما أول خطوة مناسبة برأيك؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "5f31932d51627ab5722fba07b96db2c788ed4ecb557b2bc7b6afa14369950e47"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "prompt.reason",
+      "kind": "prompt",
+      "text": "ما سبب اختيارك؟",
+      "version": "2.0.1-draft",
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "76c9b7fe71aefb30c8199a40d959ef158b1bff5e61a12926c69fea32adf548ea"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "choice.share",
+      "kind": "choice",
+      "value": "share",
+      "text": "أنشر الرسالة حتى يصل الخبر بسرعة.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "580c42e24f6fade251c3f47c991d6b11cdf7360c9dcebed0756abca53f54565e"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "choice.verify",
+      "kind": "choice",
+      "value": "verify",
+      "text": "أطلب مصدر الخبر وأراجع الجهة المنظمة.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "d6a9d1f963237ef319ce628c6e185ba230d3f8d77d21f9e7c0d7e8129b791e77"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "choice.wait",
+      "kind": "choice",
+      "value": "wait",
+      "text": "أنتظر دون أن أنشر الرسالة الآن.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "c6fdff3ef847b1b0ff280a3b90b8319886449545bb7f47eddae4311552d4efa8"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "story.extra",
+      "kind": "story",
+      "text": "يرسل أحد الأعضاء صورة فيها عبارة «نعتذر عن إلغاء الفعالية»، لكن الجزء الظاهر لا يتضمن اسم الجهة ولا التاريخ. ثم يكتب: «وصلتني الصورة من ثلاث مجموعات».",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "bb83527ccb76f18333fee44ba2cafdd699ee4cf94f25ed4f0030e499023a6f26"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "prompt.revise",
+      "kind": "prompt",
+      "text": "هل يبقى قرارك كما هو أم يتغير؟ اختر قرارك الآن، ثم اكتب السبب في ضوء المعلومة الجديدة.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "b7288ae6e298c0d3b3ac00bc84b99eb07103b8d308acd5e72d2ba8f68f11a7e4"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "followup.circulation",
+      "kind": "followup",
+      "text": "إذا وصلت الرسالة من مجموعة تثق بأفرادها، فما الخطوة التي تبقى ضرورية قبل نشرها؟",
+      "version": 2,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب متابعة تضيف زاوية جديدة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "8b5ad5511fc68fe7998468c27bdb47ef987d4c96b40f6cdd75eeb85763b5c51a"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "followup.source_context",
+      "kind": "followup",
+      "text": "لو اتضح أن الإعلان صحيح لكنه يخص الأسبوع الماضي، فما رسالتك للمجموعة؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "7173eb40dc2cb4df9dc23e1a656a6b9f670837c562a97455ea56b17de74970d5"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "followup.caution",
+      "kind": "followup",
+      "text": "كيف يمكن الانتقال من عدم التأكد إلى معلومة يعتمد عليها؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "f520dbeda75baf1ff8cb509e7f486177ea17ec2fdb02c9f7ca8e50e35a4970c5"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "followup.general",
+      "kind": "followup",
+      "text": "ما الذي تحتاج إلى معرفته قبل الاعتماد على هذه الصورة؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "04d341579ca4e017e81b8b9aa660916afa4010e2321de0d0690c347887368f97"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "comment.share",
+      "kind": "explanation",
+      "text": "سرعة التنبيه لا تكفي لتأكيد الخبر؛ يلزم التحقق من أصله قبل تداوله بوصفه حقيقة.",
+      "sourceIds": [
+        "source.49.6"
+      ],
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "68e879cf8047330273dbc1e750036a19702643b72fced5e6976f710af3202c3c"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "comment.verify",
+      "kind": "explanation",
+      "text": "طلب المصدر بداية مناسبة، وتكتمل بمراجعة التاريخ والفعالية المقصودة.",
+      "sourceIds": [
+        "source.49.6"
+      ],
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "cb62bd11f9ad9b6b759e0f001b779459363f34d4f4ce4b2e0e0b1eb46ab50a07"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "comment.wait",
+      "kind": "explanation",
+      "text": "التريث يحد من التداول، ويمكنك إكماله بالتحقق بدل البقاء دون معلومة.",
+      "sourceIds": [
+        "source.49.6"
+      ],
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "93e5753cb2f079aac1088b15b6328d65119fb8dd92b9527efe094efa76401ce2"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "explanation.main",
+      "kind": "explanation",
+      "text": "قد يكون الإعلان حقيقيًا، لكنه يخص موعدًا آخر. تساعد مراجعة المصدر الأصلي والتاريخ والسياق على معرفة الحدث المقصود. في هذه القصة، يكشف الإعلان الكامل أن الإلغاء يخص الأسبوع الماضي، وأن فعالية الغد قائمة. وإن سبق أن نقلت الخبر، يمكنك إرسال التصحيح مع المصدر.",
+      "sourceIds": [
+        "source.49.6"
+      ],
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "0265000ef1cd0c993d99f61df2928acb32722dc1e11c95c7d2607ff29ba660ef"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "source.49.6",
+      "kind": "source",
+      "text": "﴿يَا أَيُّهَا الَّذِينَ آمَنُوا إِن جَاءَكُمْ فَاسِقٌ بِنَبَإٍ فَتَبَيَّنُوا أَن تُصِيبُوا قَوْمًا بِجَهَالَةٍ فَتُصْبِحُوا عَلَىٰ مَا فَعَلْتُمْ نَادِمِينَ﴾.",
+      "citation": "سورة الحجرات، الآية ٦؛ الآية كاملة.",
+      "url": "https://quranpedia.net/tafsir/al-hujurat/6",
+      "version": 2,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "evidence",
+        "hash": "ac1e65455f12b2c9728add90ee4c7634d5c2856ccfd193c344d71191e72c1318"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "Quran 49:6 complete verse; linked reference, no copied tafsir"
+      },
+      "excerpt": false,
+      "verification": {
+        "status": "matched_to_reference",
+        "checked_on": "2026-10-05"
+      }
+    },
+    {
+      "id": "transfer.story",
+      "kind": "story",
+      "text": "يرسل لك صديقك صورة لإعلان منحة دراسية تحمل شعار مؤسسة معروفة، ويكتب: «بجهز الطلب الليلة». لا يظهر في الصورة عام الإعلان ولا آخر موعد للتقديم.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "149ec31e9796cb70f5f2a149470826f720c1d5e60277e46b30d862f708922dd5"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "transfer.prompt",
+      "kind": "prompt",
+      "text": "ما الذي ينبغي فعله قبل الاعتماد على الإعلان؟ وما ردك على صديقك؟ ولماذا؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "240a91a700eb4c7dfbccf5ce66a7ae24a5dbd8c46b97d1e972d987dfae863803"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "transfer.example",
+      "kind": "example",
+      "text": "أراجع إعلان المؤسسة الحالي وأتأكد من السنة وموعد التقديم، ثم أرسل لصديقي الرابط والنتيجة؛ فالشعار وحده لا يوضح إن كانت الفرصة متاحة الآن.",
+      "sourceIds": [
+        "source.49.6"
+      ],
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "8e7c9971274fc52e765a13dafc33aad51e05206cb2ca34085261c89207b2cdf7"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "rubric.transfer",
+      "kind": "rubric",
+      "text": "تمييز انتشار الخبر عن التحقق منه؛ طلب مصدر أصلي يمكن مراجعته؛ الانتباه للتاريخ والسياق. لا تكفي كلمة التثبت وحدها، ولا يعد غياب ذكر جزئية دليلًا على عدم فهمها. لا يستنتج حكم على الأشخاص أو تدين المتعلم.",
+      "sourceIds": [
+        "source.49.6"
+      ],
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "2452a0556b6e8a93793f6b76852ce19936b77d81a214e2aae4852a3c8183cb37"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user-edited review draft 2026-10-04"
+      }
+    },
+    {
+      "id": "prompt.revised-choice",
+      "kind": "prompt",
+      "text": "ما التصرف الذي تختاره الآن؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "7ef25a2d0ab107bdfab554a73e235a8f62ea460935bd11659c17174a4162f94f"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "development addition 2026-10-04"
+      }
+    },
+    {
+      "id": "about.what.body",
+      "kind": "interface",
+      "text": "نؤمن أن القيمة لا تتضح بتعريف وحده، بل في لحظة صغيرة نعرفها جميعا: رسالة تصلنا، زميل يخطئ، صديق غائب عن المجلس. من هذه اللحظة تبدأ الشرارة، وما يبقى بعدها هو الفهم.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "0fbf5837a5c5d5a8ca41d506d7937021c6ae4478ba3f1dc233b79343ddba4fb0"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "user supplied copy adapted for Qabas, 2026-10-04"
+      }
+    },
+    {
+      "id": "understanding.circulation",
+      "kind": "explanation",
+      "text": "تعد كثرة تداول الرسالة سببا لترجيح صحتها.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "5f9d1b3be3eb506e531f33d2bc919ff3dcb7902909c387c2c8901b57966d8bba"
+      }
+    },
+    {
+      "id": "understanding.source_context",
+      "kind": "explanation",
+      "text": "تعتمد على مراجعة المصدر الأصلي أو التاريخ والسياق.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "99f864098e34529797996cc344b9e567e446827991144c5486ae744cfe1eef6f"
+      }
+    },
+    {
+      "id": "understanding.caution",
+      "kind": "explanation",
+      "text": "تتريث لأن الخبر لم يتأكد بعد.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "7c2b2a13a4d39d31c03fcae132d9a512d34125cda2fded130d14fe140e04a56b"
+      }
+    },
+    {
+      "id": "feedback.clarification",
+      "kind": "prompt",
+      "text": "كيف ستتحقق من الإعلان: من أي مصدر، وما التاريخ الذي ستراجعه؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "ecd316a675adfe845371d61723d62006932e135b2f674bb1e0544906ddd0918a"
+      }
+    },
+    {
+      "id": "feedback.source.definition",
+      "kind": "rubric",
+      "text": "يراجع الموقع أو الإعلان الأصلي للمؤسسة؛ لا يعد الشعار أو كثرة الإرسال أو اسم ناقل موثوق وحدها تحققًا من المصدر. «أتحقق» وحدها لا تحدد مصدرا. النفي مثل «الشعار ما يكفي، أراجع موقع المؤسسة» يدعم التحقق ولا يعارضه. supported يعني اقتراحا يوافق هذا المعيار، وليس مجرد التعرف على كلمات المعيار. opposed: يصرح بأن الشعار أو التداول كاف للتأكد ويبدأ الطلب اعتمادا عليهما دون مراجعة المصدر.",
+      "version": "2.2.1",
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "1259bf9cb5811f7b32c9bff00d5e36c5791b0e4ac38544de87f994e7aaf25ae0"
+      }
+    },
+    {
+      "id": "feedback.source.strength",
+      "kind": "explanation",
+      "text": "ذكرت الرجوع إلى مصدر المؤسسة للتحقق من الإعلان.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "3f1b277be8840ae0b4c402da6534d7044bf52ff51fee8473e542874917c0e262"
+      }
+    },
+    {
+      "id": "feedback.source.addition",
+      "kind": "explanation",
+      "text": "يمكنك تحديد المصدر الأصلي الذي ستراجعه، مثل إعلان المؤسسة الحالي.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "1ed2eafcb577457cc8d635e25c98945676bb50dc9dd03ceb4c95e58ebf367ec4"
+      }
+    },
+    {
+      "id": "feedback.source.concern",
+      "kind": "explanation",
+      "text": "الشعار أو كثرة التداول وحدهما لا يثبتان أن المنحة متاحة الآن.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "e2513774cfa71779342b0c306fdb00dfdd4c616c8771a12bb0b1ce5ce6343822"
+      }
+    },
+    {
+      "id": "feedback.source.question",
+      "kind": "prompt",
+      "text": "من أين ستتحقق من الإعلان؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "adf4bfa2653274480b334a18644b83a8a1aa4d6e1d90c2e1ea4eb11ca2654c13"
+      }
+    },
+    {
+      "id": "feedback.year.definition",
+      "kind": "rubric",
+      "text": "يذكر عام الإعلان أو سنة المنحة أو التحقق أنها تخص السنة الحالية؛ ذكر كلمة التاريخ دون بيان أي تاريخ لا يثبت التحقق من العام. supported يعني اقتراحا يوافق هذا المعيار، وليس مجرد التعرف على كلمات المعيار. opposed: يصرح بأن عام الإعلان غير مهم أو يستعمل إعلانا قديما على أنه متاح رغم معرفة أنه ليس للسنة الحالية.",
+      "version": "2.2.1",
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "329c185d482a32bef2f755246b151f184d35941d7a949f88ccccfd6c45c7c335"
+      }
+    },
+    {
+      "id": "feedback.year.strength",
+      "kind": "explanation",
+      "text": "انتبهت إلى عام الإعلان أو إلى كونه يخص السنة الحالية.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "20b3927671c8f8da1b6028a3ecbc56565342961408ddf0321ee69221dc335404"
+      }
+    },
+    {
+      "id": "feedback.year.addition",
+      "kind": "explanation",
+      "text": "يمكنك إضافة التحقق من عام الإعلان أو من كونه إعلان السنة الحالية.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "d0b5efaf51dc6d56261b330ca575a4de0fccfd8278f747bdb6d971b0fa4b3abb"
+      }
+    },
+    {
+      "id": "feedback.year.concern",
+      "kind": "explanation",
+      "text": "لا يظهر عام الإعلان في الصورة، لذلك لا نعرف منها وحدها إن كان حاليا.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "42adc216fddbf11c7ddc057598ebd38b6bf6b42f11ff47fdb962c4c56e489271"
+      }
+    },
+    {
+      "id": "feedback.year.question",
+      "kind": "prompt",
+      "text": "كيف ستتأكد أن الإعلان يخص السنة الحالية؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "019258284f6cf1341ae333cd7f8ddf8449dc469468ead962782ea4cab9cebfd2"
+      }
+    },
+    {
+      "id": "feedback.deadline.definition",
+      "kind": "rubric",
+      "text": "يذكر آخر موعد للتقديم أو التحقق أن التقديم ما زال مفتوحا؛ لا يستنتج هذا من «أراجع السنة» وحدها. supported يعني اقتراحا يوافق هذا المعيار، وليس مجرد التعرف على كلمات المعيار. opposed: يصرح بأن آخر موعد غير مهم أو يبدأ على أنه متاح رغم علمه بانتهاء الموعد.",
+      "version": "2.2.1",
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "e50f03bf07a0295aa0711624b11502c38cd9fc148f15a87ad15b972dc812760c"
+      }
+    },
+    {
+      "id": "feedback.deadline.strength",
+      "kind": "explanation",
+      "text": "ذكرت التحقق من آخر موعد أو من أن التقديم ما زال مفتوحا.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "fd6b5c8999190f467dfeeb79acbbbfcf1ea439bf3aee5334c57ec6742ad31660"
+      }
+    },
+    {
+      "id": "feedback.deadline.addition",
+      "kind": "explanation",
+      "text": "يمكنك إضافة التحقق من آخر موعد للتقديم قبل تجهيز الطلب.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "d17bc78b869ad7e2371c9ef8a3e1fa44756f68b7afa49ac7c84a4dc999e39602"
+      }
+    },
+    {
+      "id": "feedback.deadline.concern",
+      "kind": "explanation",
+      "text": "لا يظهر آخر موعد في الصورة؛ لا يكفي الشعار لبدء الطلب على أنه متاح.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "3c91bbdd5bf8241262e5fa930bd473554e0aab139cb3ac2ebe808957e95abd59"
+      }
+    },
+    {
+      "id": "feedback.deadline.question",
+      "kind": "prompt",
+      "text": "ما الذي ستراجعه قبل أن يبدأ صديقك الطلب؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "0f13ee19026fec94424f6e4e5092990738fffe2ff5e22a207c9879735d4f8dac"
+      }
+    },
+    {
+      "id": "assessment.choice.share",
+      "kind": "rubric",
+      "value": "needs_correction",
+      "text": "التصرف المختار يحتاج مراجعة",
+      "version": 1,
+      "status": "draft",
+      "sourceIds": [
+        "source.49.6"
+      ],
+      "rights": {
+        "status": "cleared",
+        "origin": "Original project assessment labels; new educational criteria await separate scientific review."
+      }
+    },
+    {
+      "id": "assessment.choice.verify",
+      "kind": "rubric",
+      "value": "appropriate",
+      "text": "التصرف المختار مناسب لهذا الموقف",
+      "version": 1,
+      "status": "draft",
+      "sourceIds": [
+        "source.49.6"
+      ],
+      "rights": {
+        "status": "cleared",
+        "origin": "Original project assessment labels; new educational criteria await separate scientific review."
+      }
+    },
+    {
+      "id": "assessment.choice.wait",
+      "kind": "rubric",
+      "value": "needs_addition",
+      "text": "التصرف المختار يحتاج خطوة إضافية",
+      "version": 1,
+      "status": "draft",
+      "sourceIds": [
+        "source.49.6"
+      ],
+      "rights": {
+        "status": "cleared",
+        "origin": "Original project assessment labels; new educational criteria await separate scientific review."
+      }
+    }
+  ],
+  "reviewScope": "اعتماد تحريري من صاحبة المشروع؛ مراجعة المختص للأدلة والمصادر وتوجيه الموقف السادس محفوظة منفصلة.",
+  "reviewInputSha256": "7e2f895fbf06c2bcbfc41937a2c66659b8b71be762f935aacb7868dc813db073",
+  "editorialAdoption": {
+    "by": "صاحبة المشروع",
+    "date": "2026-10-05",
+    "scope": "اعتماد المحتوى في تجربة التطوير وتنقيح الواجهة وربط المواقف الستة."
+  },
+  "religiousReview": {
+    "basis": "ملف المراجعة وتأكيد صاحبة المشروع",
+    "file": "قبس — للمراجعة الشرعية.pdf",
+    "sha256": "109e844053a0d67978a926a5e83fe459debd32aca4064f8b3867a76a730aec9e",
+    "scope": "الأدلة والمصادر وتوجيه تغيير موضوع الموقف السادس؛ لا ينسب اعتماد تحريري جديد إلى المختص."
+  },
+  "personalFeedbackScope": "تعليق تعليمي مقيد بمعيار الموقف، دون درجة أو حكم على التدين. الصياغات والمعيار مشتقان من المحتوى؛ لا ينسب اعتماد علمي جديد للمختص."
+}

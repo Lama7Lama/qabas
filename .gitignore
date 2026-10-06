@@ -1,0 +1,19 @@
+node_modules/
+.wrangler/
+.dev.vars*
+work/
+dist/
+.env
+.DS_Store
+
+.env.*
+!.env.groq.example
+*.log
+*.pem
+*.key
+coverage/
+playwright-report/
+test-results/
+deliverables/
+# Private brand font files must not be redistributed without documented permission.
+src/web/fonts/camel-year*.otf

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "about": {
+    "aiRole": "يحلل الذكاء الاصطناعي سبب اختيارك، ويعرض ما فهمه مع عبارة من إجابتك، ثم يختار متابعة تضيف زاوية للتأمل من محتوى معد مسبقا. وفي موقف التطبيق، يقرأ إجابتك وفق ثلاثة معايير خاصة بالموقف، ليوضح ما أحسنت فيه وما يمكنك إضافته أو تصحيحه.",
+    "aiReview": "تظهر النقطة في التعليق عندما تتفق عليها قراءتان من النموذج نفسه. يتحقق قبس من أن الاقتباس ورد في إجابتك، ويحجب النقاط التي لم يتأكد منها. قد يخطئ النموذج في الفهم؛ يمكنك تصحيح فهمه أو تعديل إجابتك.",
+    "aiLimits": "الشروح والأدلة من محتوى محفوظ. لا ينشئ النموذج فتوى أو دليلا شرعيا، ولا يعطي درجة أو يصنف تدينك أو معتقداتك أو سماتك الحساسة.",
+    "privacy": "تبقى إجاباتك في ذاكرة الجلسة، ولا يسجلها قبس في قاعدة بيانات. لنكتب عن الموقف دون بيانات شخصية. حفظ التقدم اختياري، ويقتصر على اسم المرحلة وإصدار الموقف.",
+    "sourcesBody": "تستند مواقف قبس إلى أدلة من القرآن والسنة، مع إتاحة مصدر كل دليل للقراءة والتحقق.",
+    "referencesLabel": "مراجع القراءة والتحقق",
+    "references": [
+      {"label": "الدرر السنية (الموسوعة الحديثية)", "url": "https://dorar.net/hadith"},
+      {"label": "الموسوعة القرآنية", "url": "https://quranpedia.net/"},
+      {"label": "المكتبة الشاملة", "url": "https://shamela.ws/"}
+    ]
+  },
+  "humanSupport": {
+    "title": "تحتاج إلى سؤال مختص؟",
+    "body": "إذا كان سؤالك عن حكم شرعي أو واقعة خاصة، فاستعن بمختص. تعليق قبس تعليمي، ولا يغني عن سؤال أهل الاختصاص.",
+    "label": "زيارة موقع الرئاسة العامة للبحوث العلمية والإفتاء",
+    "url": "https://alifta.gov.sa/",
+    "checkedAt": "2026-10-05"
+  },
+  "topics": [
+    {
+      "id": "rifq",
+      "title": "الرفق",
+      "contentPath": "lessons/rifq.json",
+      "journeyStatus": "available",
+      "description": "كيف نعالج الخطأ بأسلوب يحفظ كرامة الآخر؟"
+    },
+    {
+      "id": "amanah",
+      "title": "الأمانة",
+      "contentPath": "lessons/amanah.json",
+      "journeyStatus": "available",
+      "description": "كيف نحفظ ما اؤتمنا عليه ونؤدي مسؤوليتنا؟"
+    },
+    {
+      "id": "tathabbut",
+      "title": "التثبت",
+      "contentPath": "tathabbut.json",
+      "journeyStatus": "available",
+      "description": "كيف نراجع الخبر ومصدره قبل أن نبني عليه قرارا؟"
+    },
+    {
+      "id": "ghibah",
+      "title": "اجتناب الغيبة",
+      "contentPath": "lessons/ghibah.json",
+      "journeyStatus": "available",
+      "description": "كيف نتحدث عن شخص غائب ونحفظ حقه؟"
+    },
+    {
+      "id": "namimah",
+      "title": "اجتناب النميمة",
+      "contentPath": "lessons/namimah.json",
+      "journeyStatus": "available",
+      "description": "كيف نتعامل مع كلام قد يوقع بين الناس؟"
+    },
+    {
+      "id": "hope_in_what_we_dislike",
+      "title": "قد يكون فيما نكره خير",
+      "contentPath": "lessons/hope_in_what_we_dislike.json",
+      "journeyStatus": "available",
+      "description": "كيف نتعامل مع ما نكره، مع بقاء الأمل والعمل؟"
+    }
+  ]
+}

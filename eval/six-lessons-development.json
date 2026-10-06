@@ -1,0 +1,30 @@
+{
+  "protocol": "development_smoke_v1",
+  "labelsStatus": "author_draft_not_independently_reviewed",
+  "cases": [
+    {"id":"rifq-01","topicId":"rifq","choice":"gentle_correction","reason":"نصلح الخطأ سوا من غير ما نحرجه قدام الفريق","expected":"gentle_correction"},
+    {"id":"rifq-02","topicId":"rifq","choice":"public_blame","reason":"لازم أحرجه قدامهم عشان يتعلم وما يعيدها","expected":"public_blame"},
+    {"id":"rifq-03","topicId":"rifq","choice":"silence","reason":"الرفق يعني ما أقول له أي شيء حتى لو يتكرر الخطأ","expected":"silence"},
+    {"id":"rifq-04","topicId":"rifq","choice":"gentle_correction","reason":"مدري","expected":"clarify"},
+    {"id":"amanah-01","topicId":"amanah","choice":"return","reason":"الفلوس مو حقي ولا عندي إذن أستخدمها","expected":"permission"},
+    {"id":"amanah-02","topicId":"amanah","choice":"keep","reason":"تعبنا بالمشوار ومن حقنا قهوة من الباقي","expected":"effort_or_donation"},
+    {"id":"amanah-03","topicId":"amanah","choice":"keep","reason":"الباقي بسيط وما يسوى نرجعه","expected":"small_amount"},
+    {"id":"amanah-04","topicId":"amanah","choice":"return","reason":"مدري","expected":"clarify"},
+    {"id":"tathabbut-01","topicId":"tathabbut","choice":"verify","reason":"سأراجع مصدر الإعلان وتاريخه، انتشاره وحده ما يثبت أنه صحيح","expected":"source_context"},
+    {"id":"tathabbut-02","topicId":"tathabbut","choice":"share","reason":"معقولة كل هالناس غلطانين؟ الكل أرسلها لذلك أكيد صحيحة","expected":"circulation"},
+    {"id":"tathabbut-03","topicId":"tathabbut","choice":"wait","reason":"مو متأكد وأخاف أنشر شيء غلط","expected":"caution"},
+    {"id":"tathabbut-04","topicId":"tathabbut","choice":"verify","reason":"مدري","expected":"clarify"},
+    {"id":"ghibah-01","topicId":"ghibah","choice":"refuse","reason":"صحة الكلام ما تبيح السخرية من الغائب بما يكره","expected":"principle"},
+    {"id":"ghibah-02","topicId":"ghibah","choice":"repeat","reason":"دام كل اللي نقوله صحيح عادي نضحك ونقلده","expected":"truth_justification"},
+    {"id":"ghibah-03","topicId":"ghibah","choice":"refuse","reason":"ما أبي أشارك بالسخرية بس خايف أحرج أصحابي","expected":"social_pressure"},
+    {"id":"ghibah-04","topicId":"ghibah","choice":"refuse","reason":"مدري","expected":"clarify"},
+    {"id":"namimah-01","topicId":"namimah","choice":"deescalate","reason":"نناقش تأخر العمل مباشرة بدون نقل كلام يستفز الزميلة","expected":"deescalation"},
+    {"id":"namimah-02","topicId":"namimah","choice":"provoke","reason":"بنقله مع تعليق يستفزها، هو قاله فعلا والكلام صحيح","expected":"truth_justification"},
+    {"id":"namimah-03","topicId":"namimah","choice":"deescalate","reason":"عشان أصلح بينهم بكرر لها الإهانة بالحرف وأطلب منها تهدأ","expected":"clarify"},
+    {"id":"namimah-04","topicId":"namimah","choice":"deescalate","reason":"مدري","expected":"clarify"},
+    {"id":"hope-01","topicId":"hope_in_what_we_dislike","choice":"humble_hope","reason":"أنا متضايق لكن ما أعرف كل النتائج، يمكن يكون فيه خير","expected":"humble_hope"},
+    {"id":"hope-02","topicId":"hope_in_what_we_dislike","choice":"specific_unseen_claim","reason":"أكيد تأخر الموعد عشان أحصل نتيجة أفضل وأنا متأكد من السبب","expected":"specific_unseen_claim"},
+    {"id":"hope-03","topicId":"hope_in_what_we_dislike","choice":"negative_certainty","reason":"ضاع الموعد وكل اللي حصل شر وما فيه أي خير ممكن","expected":"negative_certainty"},
+    {"id":"hope-04","topicId":"hope_in_what_we_dislike","choice":"humble_hope","reason":"مدري","expected":"clarify"}
+  ]
+}

@@ -1,0 +1,891 @@
+{
+  "schemaVersion": 1,
+  "topic": {
+    "id": "namimah",
+    "version": "2.3.0",
+    "title": "كلام قد يشعل الخلاف",
+    "value": "اجتناب النميمة",
+    "objective": "فهم أثر نقل الكلام لإثارة الخلاف، وتمييزه عن نقل المعلومات لغرض مشروع.",
+    "refs": {
+      "intro": "story.intro",
+      "question": "prompt.choice",
+      "reason": "prompt.reason",
+      "extra": "story.extra",
+      "revise": "prompt.revise",
+      "choices": [
+        "choice.provoke",
+        "choice.deescalate",
+        "choice.spread"
+      ],
+      "followups": {
+        "truth_justification": "followup.truth_justification",
+        "repeating_insult": "followup.repeating_insult",
+        "deescalation": "followup.deescalation",
+        "clarify": "followup.clarify",
+        "general": "followup.general"
+      },
+      "comments": {
+        "provoke": "comment.provoke",
+        "deescalate": "comment.deescalate",
+        "spread": "comment.spread"
+      },
+      "explanation": "explanation.main",
+      "source": "source.muslim-105",
+      "rubric": "rubric.transfer",
+      "transfer": "transfer.story",
+      "transferPrompt": "transfer.prompt",
+      "transferExample": "transfer.example",
+      "scopeNotes": "scope.notes",
+      "understandings": {
+        "truth_justification": "understanding.truth_justification",
+        "repeating_insult": "understanding.repeating_insult",
+        "deescalation": "understanding.deescalation"
+      },
+      "transferFeedback": {
+        "criteria": {
+          "purpose": {
+            "definition": "feedback.purpose.definition",
+            "strength": "feedback.purpose.strength",
+            "addition": "feedback.purpose.addition",
+            "concern": "feedback.purpose.concern",
+            "question": "feedback.purpose.question"
+          },
+          "truth": {
+            "definition": "feedback.truth.definition",
+            "strength": "feedback.truth.strength",
+            "addition": "feedback.truth.addition",
+            "concern": "feedback.truth.concern",
+            "question": "feedback.truth.question"
+          },
+          "alternative": {
+            "definition": "feedback.alternative.definition",
+            "strength": "feedback.alternative.strength",
+            "addition": "feedback.alternative.addition",
+            "concern": "feedback.alternative.concern",
+            "question": "feedback.alternative.question"
+          }
+        },
+        "clarification": "feedback.clarification"
+      },
+      "choiceAssessments": {
+        "provoke": "assessment.choice.provoke",
+        "deescalate": "assessment.choice.deescalate",
+        "spread": "assessment.choice.spread"
+      }
+    }
+  },
+  "provenance": {
+    "kind": "review_document",
+    "body_changes": "تصحيح معرّفات الخيارات واختصار تعليمات الكتابة؛ الموقف السادس صياغة وفق توجيه المختص.",
+    "review_scope": "evidence_only_as_reported_by_user"
+  },
+  "reviewScope": "اعتماد تحريري من صاحبة المشروع؛ مراجعة المختص للأدلة والمصادر وتوجيه الموقف السادس محفوظة منفصلة.",
+  "reviewInputSha256": "7e2f895fbf06c2bcbfc41937a2c66659b8b71be762f935aacb7868dc813db073",
+  "records": [
+    {
+      "id": "story.intro",
+      "kind": "story",
+      "text": "أنت ضمن فريق يعمل على تجهيز عرض، ومعك زميل وزميلة. أثناء غياب الزميلة، يقول الزميل بانزعاج: «كل مرة نتأخر بسببها».\n\nوبعد قليل ينفرد بك زميل ثالث من الفريق ويقول:\n\n«وش رأيك ننقل للزميلة كلامه، ونخليهم يتواجهون قدامنا ونشوف وش يصير؟»",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "4eca6c340becdc6e8be1634c662aad8f6ce8bb834619edae6fe0988b2bef4c40"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "prompt.choice",
+      "kind": "prompt",
+      "text": "ما تصرفك؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "3d5a20a6c7bc4fc0fb60c6bbad0d0a2d921afbce0753e2f8a4b65c7252a227db"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "prompt.reason",
+      "kind": "prompt",
+      "text": "ما سبب اختيارك؟",
+      "version": 2,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "ba33bd71d4d50606abb4590971c29c35501762a62514d9671925688235d495e8"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "choice.provoke",
+      "kind": "choice",
+      "text": "أنقل العبارة إلى الزميلة مع تعليق يستفزها حتى تواجه الزميل.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "362cb2df6241c22db3b544a6202d2b9b73ecd0485065eeeddf2a8d6b5d9f3bfe"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "value": "provoke"
+    },
+    {
+      "id": "choice.deescalate",
+      "kind": "choice",
+      "text": "أرفض إشعال الخلاف، وأقترح أن يناقش الفريق موعد التسليم وتوزيع العمل مباشرة وبهدوء.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "e42a49dc8ef9866fb3ca0bdd94eecebbf8c178de5e46b5b117afedd4a2e21146"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "value": "deescalate"
+    },
+    {
+      "id": "choice.spread",
+      "kind": "choice",
+      "text": "أرسل العبارة إلى مجموعة أخرى لمتابعة ردود الفعل.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "65326c4bb8896d90523344e3e4478ad7e0e2b30ef60ad17e0c62b461053fdf33"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "value": "spread"
+    },
+    {
+      "id": "story.extra",
+      "kind": "story",
+      "text": "يقول الزميل الثالث: «لكنه قالها فعلًا، ونقل كلامه مثل ما هو مو كذب».",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "78661208313d297172bfad82ca2fb16cd51abdca0b4acb103ef86ccf1f1d0076"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "prompt.revise",
+      "kind": "prompt",
+      "text": "هل يؤثر ذلك في قرارك؟ ولماذا؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "177bf1b7f181dffba113178ff6d60b3d5e7c4131686f5718e9362f81cad9b22f"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "followup.truth_justification",
+      "kind": "followup",
+      "text": "إذا احتجتم إلى مناقشة تأخر العمل، فما المعلومة المفيدة التي تنقلها دون إعادة التجريح؟",
+      "version": 2,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب متابعة تضيف زاوية جديدة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "c0a76b78b2fa676d7c5f9df01255d4692f483c0f417ccef531b08343fc4c9135"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "condition": "إذا جعل المتعلم صدق النقل مبررًا: «هل دقة نقل الكلام وحدها تجعل استخدامه لإشعال الشجار مقبولًا؟»"
+    },
+    {
+      "id": "followup.repeating_insult",
+      "kind": "followup",
+      "text": "كيف يمكن الدعوة إلى مناقشة التأخير دون إعادة العبارة التي تزيد الخصومة؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "058b5329839b68c8b08192edcbafad6f0d02c2009b0f772c2a9733f40157c648"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "condition": "إذا خلط الإصلاح بإعادة التجريح: «كيف يمكن الدعوة إلى مناقشة التأخير دون إعادة العبارة التي تزيد الخصومة؟»"
+    },
+    {
+      "id": "followup.deescalation",
+      "kind": "followup",
+      "text": "ما الرسالة المناسبة لدعوة الفريق إلى الاتفاق على موعد التسليم دون نقل التجريح؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "253fbbd464339ab5d9c6fb27236f3bfbfa334e3cbabe155f5da5073816d3b359"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "condition": "إذا ذكر منع التصعيد: «ما الرسالة المناسبة لدعوة الفريق إلى الاتفاق على موعد التسليم دون نقل التجريح؟»"
+    },
+    {
+      "id": "followup.clarify",
+      "kind": "followup",
+      "text": "ما الفكرة التي اعتمدت عليها في اختيارك؟ يمكنك كتابة: لا أعرف.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "509a30a374712a1094d6125aea235c34bb1586001de1fb5529a4bda3c546bc74"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "followup.general",
+      "kind": "followup",
+      "text": "هل يؤثر ذلك في قرارك؟ ولماذا؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "34c26e6c2ada214df276611bc9f1f4a09ae0f904d331b0b669dfaf72fe88c895"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "comment.provoke",
+      "kind": "explanation",
+      "text": "نقل العبارة هنا بقصد الاستفزاز يزيد الخلاف، ولا يعالج سبب تأخر العمل.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "0e3c3eb03adae0aa47ee4d59745962dce5deef653b5eb2fe464825f908f1dc95"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.muslim-105"
+      ]
+    },
+    {
+      "id": "comment.deescalate",
+      "kind": "explanation",
+      "text": "أبقيت النقاش على المشكلة العملية، واقترحت تواصلًا مباشرًا بدل إشعال المشادة.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "f10abb6bdc07c57f531963e8301b8244abe260f10b6033d296b4bc592b159a58"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.muslim-105"
+      ]
+    },
+    {
+      "id": "comment.spread",
+      "kind": "explanation",
+      "text": "توسيع دائرة تداول العبارة يوسع أثر الخلاف بدل إصلاحه.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "ea1e021da9a6dc565a06190238747b889b8c34c899649aa700f2d72e4d07d9e0"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.muslim-105"
+      ]
+    },
+    {
+      "id": "explanation.main",
+      "kind": "explanation",
+      "text": "تتناول القصة نقل الكلام بين الناس للإفساد بينهم. صدق العبارة لا يبرر استخدامها لإشعال الخصومة. يمكن معالجة مشكلة العمل بتواصل واضح حول المهمة.\n\nولا يعني ذلك منع الإبلاغ عن تهديد أو ظلم، أو منع طلب مساعدة مناسبة لرفع ضرر.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "63fa42e7a9c619f7e1f23c5b6df934f2059ed91cccc4bc9cc21d3aa6802b3389"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.muslim-105"
+      ]
+    },
+    {
+      "id": "source.muslim-105",
+      "kind": "source",
+      "text": "«لا يدخل الجنة نمام».",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "evidence",
+        "hash": "566e59496a31aeae019b200377f39a81a1974929182754f0880fc495878a6f5d"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "citation": "عن حذيفة بن اليمان رضي الله عنه، صحيح مسلم، رقم ١٠٥.",
+      "url": "https://dorar.net/hadith/sharh/3224",
+      "excerpt": true,
+      "verification": {
+        "status": "matched_to_reference",
+        "checked_on": "2026-10-05"
+      }
+    },
+    {
+      "id": "transfer.story",
+      "kind": "story",
+      "text": "بعد زيارة عائلية، تقول قريبتكم كلامًا جارحًا عن ترتيب الضيافة. يقترح عليك أخوك إرسال كلامها إلى صاحبة المنزل، ويقول:\n\n«خلها تزعل منها، عشان ما تعزمها مرة ثانية».",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "a040abd893bfb8279c5ff52d89e478759096cd6752289d96384f0600d166ad38"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "transfer.prompt",
+      "kind": "prompt",
+      "text": "ما ردك على أخيك؟ ولماذا؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "cf3ce10736a084fdbc6e313ae3bdd5d8fef270b4620d61c590886cfb38ad1be1"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "transfer.example",
+      "kind": "example",
+      "text": "«لن أرسل الكلام لإفساد العلاقة. أقول لأخي: خلينا ما ننقل التجريح، وإذا فيه ملاحظة مفيدة على الترتيب نناقشها بلطف في وقت مناسب».\n\nتقبل إجابات أخرى توقف التصعيد ولا تمنع طلب المساعدة عند الحاجة.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "5b409c71890ee5db5ec37c0fcd8729110df8f24ad5853ff113a63732c8808787"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.muslim-105"
+      ]
+    },
+    {
+      "id": "rubric.transfer",
+      "kind": "rubric",
+      "text": "يميز المتعلم بين صدق العبارة والغرض من نقلها.\nيلاحظ أثر إشعال الخلاف المصرح به في القصة.\nيقترح بديلًا لا ينشر التجريح.\nلا يستنتج النموذج نية خفية من إجابة محتملة، ولا يجعل كل نقل للكلام نميمة.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "0d29c1c21cfc473470c72a5d1ec3ceee8fc09ac89954fccc954c213d34690326"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.muslim-105"
+      ]
+    },
+    {
+      "id": "scope.notes",
+      "kind": "explanation",
+      "text": "حدود المثالين للمراجعة:\nالمقصود نقل التجريح لإثارة الخلاف، كما يصرح الحوار. لا يتناول المثالان تهديدًا أو ظلمًا يحتاج إلى إبلاغ، ولا يصح تعميمهما على كل نقل للمعلومات.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "92ed7e9af0e79a6a5ae1cf741a8b8858913d95b6b9a3261d045b816a2bce0926"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.muslim-105"
+      ]
+    },
+    {
+      "id": "understanding.truth_justification",
+      "kind": "explanation",
+      "text": "ترى أن صدق العبارة يبرر نقلها ولو زادت الخلاف.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "f45a546fa1e163f031aca9d74bf258175a690cf1e4c0af31efa66006071fd569"
+      }
+    },
+    {
+      "id": "understanding.repeating_insult",
+      "kind": "explanation",
+      "text": "تقصد الإصلاح، وتقترح إعادة العبارة الجارحة لتحقيقه.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "ec8b34460fad93e9d288ce884c440e4591daa2c9e727beca5ccfd794b45622eb"
+      }
+    },
+    {
+      "id": "understanding.deescalation",
+      "kind": "explanation",
+      "text": "تريد مناقشة المشكلة دون نقل التجريح لإشعال الخلاف.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "ef9b01a84c66b3705976134a4a570ed45de2e43c1b7b1d20bf58e8efb071e6e9"
+      }
+    },
+    {
+      "id": "feedback.clarification",
+      "kind": "prompt",
+      "text": "ما الذي ستقوله لأخيك، وهل ستنقل العبارة؟ وضح الغرض من تصرفك.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "579d6411405e73e16ccdd7be9f605ff7a60d84b280321b50556a6d8858b1382c"
+      }
+    },
+    {
+      "id": "feedback.purpose.definition",
+      "kind": "rubric",
+      "text": "يرفض النقل لإشعال الخلاف أو يوضح أثره ويقترح تجنبه، في سياق الغرض المصرح به في القصة. لا يستنتج نية خفية؛ الإبلاغ عن تهديد أو ظلم وطلب المساعدة خارج نطاق هذه القصة. supported يعني اقتراحا يوافق هذا المعيار، وليس مجرد التعرف على كلمات المعيار. opposed: يتبنى نقل العبارة لإغضاب الطرف الآخر أو إفساد العلاقة. مجرد ذكر غرض الإفساد مع تبنيه ليس فهما مناسبا ولا supported.",
+      "version": "2.2.1",
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "312e9888f34df379de15113f9857f2d4ef22a49c8d0d82a1f1a2bcc0a35389a6"
+      }
+    },
+    {
+      "id": "feedback.purpose.strength",
+      "kind": "explanation",
+      "text": "انتبهت إلى غرض النقل أو إلى أثره في إشعال الخلاف.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "dd18a115980237a7db6cd3135226aa121eaa0516eb81a6d8f48a932bd705b874"
+      }
+    },
+    {
+      "id": "feedback.purpose.addition",
+      "kind": "explanation",
+      "text": "يمكنك توضيح أثر نقل العبارة في العلاقة بين الطرفين.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "e03de82a4c8af2923fca8c72084ad304ec9519ca6ce8df09a7df220720fd13bf"
+      }
+    },
+    {
+      "id": "feedback.purpose.concern",
+      "kind": "explanation",
+      "text": "القصة تصرح بأن الغرض هو إغضاب صاحبة المنزل؛ نقل التجريح بهذا الغرض يزيد الخلاف.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "aa8ebb8fcbfebc2fd2dfc810197caa5644bc48cb268d1626e1be454e74e1a9e0"
+      }
+    },
+    {
+      "id": "feedback.purpose.question",
+      "kind": "prompt",
+      "text": "ما أثر النقل بهذا الغرض على العلاقة؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "713a1617fd80e014a4c7842b2dcf986bac7be1ea0936d1e59d769e384e56a9f2"
+      }
+    },
+    {
+      "id": "feedback.truth.definition",
+      "kind": "rubric",
+      "text": "يميز أن صدق العبارة لا يبرر استخدامها للإفساد؛ لا يستنتج هذا من مجرد رفض الإرسال. supported يعني اقتراحا يوافق هذا المعيار، وليس مجرد التعرف على كلمات المعيار. opposed: يتبنى أن صدق العبارة يبرر استخدامها للإفساد.",
+      "version": "2.2.1",
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "673931830325264b69551f7fd015b8ff8c592813f4be379c10bbb9e8e9c2b8e2"
+      }
+    },
+    {
+      "id": "feedback.truth.strength",
+      "kind": "explanation",
+      "text": "ميزت بين صدق العبارة وبين الغرض من نقلها.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "992df2566316bd5e6e268109cc494adbe32089b11084d1fc7f23921c3d78e5e2"
+      }
+    },
+    {
+      "id": "feedback.truth.addition",
+      "kind": "explanation",
+      "text": "يمكنك توضيح لماذا لا يكفي صدق العبارة لتبرير نقلها لإفساد العلاقة.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "0504ca491cb0504241b5036ed9ea1423c99981c66de03437da94c86e86e621d3"
+      }
+    },
+    {
+      "id": "feedback.truth.concern",
+      "kind": "explanation",
+      "text": "صدق العبارة لا يبرر استخدامها لإشعال الخصومة في هذا الموقف.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "e74e4e884fb8997be1bb040e62b447a28158ca7ff453259a4396fd9254824d9c"
+      }
+    },
+    {
+      "id": "feedback.truth.question",
+      "kind": "prompt",
+      "text": "هل صدق العبارة يغير الغرض من استخدامها؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "526418426430cebe06f2e8455d05fb1243a13395383849713b4818dbfab9f6d8"
+      }
+    },
+    {
+      "id": "feedback.alternative.definition",
+      "kind": "rubric",
+      "text": "يقترح الامتناع عن نقل التجريح أو معالجة ملاحظة مفيدة بلطف دون إشعال الخلاف؛ لا يجعل كل نقل للكلام ممنوعا. supported يعني اقتراحا يوافق هذا المعيار، وليس مجرد التعرف على كلمات المعيار. opposed: يقترح نقل التجريح للإفساد أو لتوسيع الخصومة؛ هذا فعل معاكس لا مجرد غياب البديل.",
+      "version": "2.2.1",
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "374d2814cc37832a4f438445eb6bf2cfa6fb2d47addb521411e40573f0721eb6"
+      }
+    },
+    {
+      "id": "feedback.alternative.strength",
+      "kind": "explanation",
+      "text": "اقترحت تصرفا يوقف التصعيد أو يعالج الملاحظة دون نقل التجريح.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "266157b6842e8f520700a878d38512547f233a8c577794a135d69aba49bdd3a6"
+      }
+    },
+    {
+      "id": "feedback.alternative.addition",
+      "kind": "explanation",
+      "text": "يمكنك إضافة رد عملي على أخيك أو طريقة هادئة لمعالجة الملاحظة المفيدة.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "549ac9f9185509370ec9be354b76730c358316a724c7a6ceb1fa5835c0813763"
+      }
+    },
+    {
+      "id": "feedback.alternative.concern",
+      "kind": "explanation",
+      "text": "إعادة التجريح ليست شرطا لمناقشة ملاحظة مفيدة.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "ad92ed474bb6861fb21ea397eee4d778478ae72e2901639ef030006ade8a950e"
+      }
+    },
+    {
+      "id": "feedback.alternative.question",
+      "kind": "prompt",
+      "text": "ما الرد العملي الذي يوقف التصعيد؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "a7fc9fd201fbd76be9a5644f4a935198e20feffafbe875d573a884fbf71544e6"
+      }
+    },
+    {
+      "id": "assessment.choice.provoke",
+      "kind": "rubric",
+      "value": "needs_correction",
+      "text": "التصرف المختار يحتاج مراجعة",
+      "version": 1,
+      "status": "draft",
+      "sourceIds": [
+        "source.muslim-105"
+      ],
+      "rights": {
+        "status": "cleared",
+        "origin": "Original project assessment labels; new educational criteria await separate scientific review."
+      }
+    },
+    {
+      "id": "assessment.choice.deescalate",
+      "kind": "rubric",
+      "value": "appropriate",
+      "text": "التصرف المختار مناسب لهذا الموقف",
+      "version": 1,
+      "status": "draft",
+      "sourceIds": [
+        "source.muslim-105"
+      ],
+      "rights": {
+        "status": "cleared",
+        "origin": "Original project assessment labels; new educational criteria await separate scientific review."
+      }
+    },
+    {
+      "id": "assessment.choice.spread",
+      "kind": "rubric",
+      "value": "needs_correction",
+      "text": "التصرف المختار يحتاج مراجعة",
+      "version": 1,
+      "status": "draft",
+      "sourceIds": [
+        "source.muslim-105"
+      ],
+      "rights": {
+        "status": "cleared",
+        "origin": "Original project assessment labels; new educational criteria await separate scientific review."
+      }
+    }
+  ],
+  "editorialAdoption": {
+    "by": "صاحبة المشروع",
+    "date": "2026-10-05",
+    "scope": "اعتماد المحتوى في تجربة التطوير وتنقيح الواجهة وربط المواقف الستة."
+  },
+  "religiousReview": {
+    "basis": "ملف المراجعة وتأكيد صاحبة المشروع",
+    "file": "قبس — للمراجعة الشرعية.pdf",
+    "sha256": "109e844053a0d67978a926a5e83fe459debd32aca4064f8b3867a76a730aec9e",
+    "scope": "الأدلة والمصادر وتوجيه تغيير موضوع الموقف السادس؛ لا ينسب اعتماد تحريري جديد إلى المختص."
+  },
+  "personalFeedbackScope": "تعليق تعليمي مقيد بمعيار الموقف، دون درجة أو حكم على التدين. الصياغات والمعيار مشتقان من المحتوى؛ لا ينسب اعتماد علمي جديد للمختص."
+}

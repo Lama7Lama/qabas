@@ -1,0 +1,870 @@
+{
+  "schemaVersion": 1,
+  "topic": {
+    "id": "rifq",
+    "version": "2.3.0",
+    "title": "خطأ قبل موعد التسليم",
+    "value": "الرفق",
+    "objective": "معالجة الخطأ بوضوح ورفق، مع مراعاة الوقت والمسؤولية.",
+    "refs": {
+      "intro": "story.intro",
+      "question": "prompt.choice",
+      "reason": "prompt.reason",
+      "extra": "story.extra",
+      "revise": "prompt.revise",
+      "choices": [
+        "choice.public_blame",
+        "choice.gentle_correction",
+        "choice.silence"
+      ],
+      "followups": {
+        "public_blame": "followup.public_blame",
+        "silence": "followup.silence",
+        "gentle_correction": "followup.gentle_correction",
+        "clarify": "followup.clarify",
+        "general": "followup.general"
+      },
+      "comments": {
+        "public_blame": "comment.public_blame",
+        "gentle_correction": "comment.gentle_correction",
+        "silence": "comment.silence"
+      },
+      "explanation": "explanation.main",
+      "source": "source.muslim-2594",
+      "rubric": "rubric.transfer",
+      "transfer": "transfer.story",
+      "transferPrompt": "transfer.prompt",
+      "transferExample": "transfer.example",
+      "understandings": {
+        "public_blame": "understanding.public_blame",
+        "silence": "understanding.silence",
+        "gentle_correction": "understanding.gentle_correction"
+      },
+      "transferFeedback": {
+        "criteria": {
+          "respect": {
+            "definition": "feedback.respect.definition",
+            "strength": "feedback.respect.strength",
+            "addition": "feedback.respect.addition",
+            "concern": "feedback.respect.concern",
+            "question": "feedback.respect.question"
+          },
+          "practical": {
+            "definition": "feedback.practical.definition",
+            "strength": "feedback.practical.strength",
+            "addition": "feedback.practical.addition",
+            "concern": "feedback.practical.concern",
+            "question": "feedback.practical.question"
+          },
+          "agreement": {
+            "definition": "feedback.agreement.definition",
+            "strength": "feedback.agreement.strength",
+            "addition": "feedback.agreement.addition",
+            "concern": "feedback.agreement.concern",
+            "question": "feedback.agreement.question"
+          }
+        },
+        "clarification": "feedback.clarification"
+      },
+      "choiceAssessments": {
+        "public_blame": "assessment.choice.public_blame",
+        "gentle_correction": "assessment.choice.gentle_correction",
+        "silence": "assessment.choice.silence"
+      }
+    }
+  },
+  "provenance": {
+    "kind": "review_document",
+    "body_changes": "تصحيح معرّفات الخيارات واختصار تعليمات الكتابة؛ الموقف السادس صياغة وفق توجيه المختص.",
+    "review_scope": "evidence_only_as_reported_by_user"
+  },
+  "reviewScope": "اعتماد تحريري من صاحبة المشروع؛ مراجعة المختص للأدلة والمصادر وتوجيه الموقف السادس محفوظة منفصلة.",
+  "reviewInputSha256": "7e2f895fbf06c2bcbfc41937a2c66659b8b71be762f935aacb7868dc813db073",
+  "records": [
+    {
+      "id": "story.intro",
+      "kind": "story",
+      "text": "الساعة الثالثة عصرًا، والتقرير يجب أن يصل إلى العميل قبل الخامسة. تصلك النسخة التي أرسلها زميلك الجديد، الذي انضم للفريق قبل أسبوعين.\n\nوعند فتحها، يتبين أن أرقام جدول المبيعات لا تطابق الملف الأصلي، وأن بعض الأسماء مكتوبة خطأ في صفحتين. يقف زميلك قرب مكتبك والتوتر ظاهر عليه، وبقية الفريق حولكما في المكتب نفسه.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "3f619dca22d8603ee7b8093d0f8449b0715265ee0bb03795f136c59bca1120e5"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "prompt.choice",
+      "kind": "prompt",
+      "text": "ما تصرفك؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "3d5a20a6c7bc4fc0fb60c6bbad0d0a2d921afbce0753e2f8a4b65c7252a227db"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "prompt.reason",
+      "kind": "prompt",
+      "text": "ما سبب اختيارك؟",
+      "version": 2,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "ba33bd71d4d50606abb4590971c29c35501762a62514d9671925688235d495e8"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "choice.public_blame",
+      "kind": "choice",
+      "text": "أقول له بصوت يسمعه الجميع: «كيف ترسل ملفًا بهذه الأخطاء؟ ألا تراجعه قبل الإرسال؟»",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "6cc01f75d160ace1243dd6cbf33e4f816249f238bcaca53a4986ec8e69a17eb7"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "value": "public_blame"
+    },
+    {
+      "id": "choice.gentle_correction",
+      "kind": "choice",
+      "text": "أطلب منه أن يجلس معي، وأوضح له الأخطاء، ونتفق على توزيع التصحيحات وموعد إرسال النسخة الصحيحة.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "7212f471c543e4c1d36dea4df3ea8748ee9e5acc29bbb8754d073d30786561e6"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "value": "gentle_correction"
+    },
+    {
+      "id": "choice.silence",
+      "kind": "choice",
+      "text": "أصلحها بنفسي بهدوء ولا أذكر له شيئًا حتى لا أحرجه.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "741b69d259fcbbe48ac28b6d61b172b37d96da510c0d8f0530eb42745e71306b"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "value": "silence"
+    },
+    {
+      "id": "story.extra",
+      "kind": "story",
+      "text": "يقول الزميل: «استخدمت الملف الموجود في المجلد المشترك، ولم أعرف أن هناك نسخة أحدث».",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "52ff6cd289daeb92aaf2beea6f4bd9024c67b470aa981223e1c66cba4caec0c1"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "prompt.revise",
+      "kind": "prompt",
+      "text": "هل يبقى قرارك كما هو أم يتغير؟ ولماذا؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "5cec0e21dd1eb3c87fda61d62d0c69a3087c67ca466f1262634cc1786f6744aa"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "followup.public_blame",
+      "kind": "followup",
+      "text": "ما الجملة المناسبة لتوضيح الخطأ وموعد تصحيحه دون إحراج الزميل؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "eef5c86c45579afc548ad783af6eac475e332275f5a1234aa1a51752524d0485"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "condition": "إذا رأى المتعلم الإحراج ضروريًا للتعليم: «ما الجملة المناسبة لتوضيح الخطأ وموعد تصحيحه دون إحراج الزميل؟»"
+    },
+    {
+      "id": "followup.silence",
+      "kind": "followup",
+      "text": "بعد إرسال التقرير، كيف يمكن مساعدة الزميل على معرفة النسخة الصحيحة في المرة القادمة؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "b797899c369fc8fd6f333be751c02c2fe490fb5713da7835a1a6684f8474646d"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "condition": "إذا ساوى الرفق بالسكوت الدائم: «بعد إرسال التقرير، كيف يمكن مساعدة الزميل على معرفة النسخة الصحيحة في المرة القادمة؟»"
+    },
+    {
+      "id": "followup.gentle_correction",
+      "kind": "followup",
+      "text": "كيف يمكن توضيح مسؤولية مراجعة النسخة، وتنظيم المجلد المشترك لتجنب الالتباس؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "10de79cae1809c07b3fa995247ea2cfcfab458d860e9eff96f2baa8a32f5d35f"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "condition": "إذا جمع بين التصحيح والرفق: «كيف يمكن توضيح مسؤولية مراجعة النسخة، وتنظيم المجلد المشترك لتجنب الالتباس؟»"
+    },
+    {
+      "id": "followup.clarify",
+      "kind": "followup",
+      "text": "ما الفكرة التي اعتمدت عليها في اختيارك؟ يمكنك كتابة: لا أعرف.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "509a30a374712a1094d6125aea235c34bb1586001de1fb5529a4bda3c546bc74"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "followup.general",
+      "kind": "followup",
+      "text": "هل يبقى قرارك كما هو أم يتغير؟ ولماذا؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "d67047470c27f1de3203f0830e26fa96aba1dd1157d97967c0f72735a20e2194"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "comment.public_blame",
+      "kind": "explanation",
+      "text": "يمكن توضيح الخطأ المطلوب تصحيحه بأسلوب مناسب؛ العتاب أمام الجميع قد يزيد التوتر.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "1613968344a198cde65923927410b87e2891f34f2ff4ee0fa48df6bd1d460d7b"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.muslim-2594"
+      ]
+    },
+    {
+      "id": "comment.gentle_correction",
+      "kind": "explanation",
+      "text": "وضحت المطلوب، ووزعت العمل، وحددت موعدًا دون إهانة الشخص.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "a02d11ac20c96b4ba2c78bf424d45a3f6aa373dfceb67f0f69fdb57184d39d4b"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.muslim-2594"
+      ]
+    },
+    {
+      "id": "comment.silence",
+      "kind": "explanation",
+      "text": "أصلحت المشكلة الحالية. وقد يناسب ضغط الوقت تأجيل شرحها؛ هذا الخيار ليس خطأ في ذاته.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "8f9dcead22ddc49e1f909733778643871cba6510fe7822d8db5d7ac9906308a7"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.muslim-2594"
+      ]
+    },
+    {
+      "id": "explanation.main",
+      "kind": "explanation",
+      "text": "الرفق يظهر في طريقة معالجة الخطأ. يمكنك توضيح المطلوب، وتحديد المسؤوليات، ومراجعة النتيجة بأسلوب يحفظ كرامة الشخص.\n\nتوقيت الشرح يتأثر بظروف العمل؛ وإصلاح الخطأ أولًا ثم مناقشته لاحقًا قد يكون مناسبًا.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "caff9bc80bba09e057b5d2fce8530cddc29f965db368661c7376b31bb65bfc46"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.muslim-2594"
+      ]
+    },
+    {
+      "id": "source.muslim-2594",
+      "kind": "source",
+      "text": "«إنَّ الرِّفقَ لا يكونُ في شيءٍ إلَّا زانَه، ولا يُنزعُ من شيءٍ إلَّا شانَه».",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "evidence",
+        "hash": "8aee413bb80df66d20def281aea53ed3cfcdc03b1656329225d910ebe1520204"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "citation": "عن عائشة رضي الله عنها، صحيح مسلم، رقم ٢٥٩٤.",
+      "url": "https://dorar.net/h/2wm40h19?osoul=1",
+      "excerpt": false,
+      "verification": {
+        "status": "matched_to_reference",
+        "checked_on": "2026-10-05"
+      }
+    },
+    {
+      "id": "transfer.story",
+      "kind": "story",
+      "text": "اتفقت مع أختك على أن تعيد إليك جهازك اللوحي مشحونًا لأن لديك درسًا مسائيًا. قبل الدرس بعشر دقائق يتبين أن البطارية فارغة.\n\nتقول أختك: «آسفة، نسيت أوصله بالشاحن». ويمكن حضور الدرس مؤقتًا من الهاتف.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "52c67e4280e9f630e4bbf79efe31718c689e89459618cceec09b28fe81db801d"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "transfer.prompt",
+      "kind": "prompt",
+      "text": "ما ردك عليها الآن؟ وما الاتفاق المناسب لتجنب تكرار الموقف؟ ولماذا؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "b2505f565f7569e1d63e2f2780acf2ac62ac712e9af0cb15ec4b7559ab3467d1"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "transfer.example",
+      "kind": "example",
+      "text": "«أحضر الدرس من الهاتف الآن، وأقول لأختي: كنت أحتاج الجهاز مشحونًا كما اتفقنا. بعد الدرس نتفق على تذكير يساعد على إعادة الجهاز مشحونًا في المرة القادمة».\n\nتقبل بدائل عملية هادئة تحقق المعنى نفسه.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "26a195b74b2df6370a3f388bd1fe6f908e824c22b5e25caa4013d16aa24d0796"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.muslim-2594"
+      ]
+    },
+    {
+      "id": "rubric.transfer",
+      "kind": "rubric",
+      "text": "يحدد المتعلم الخطأ أو الحاجة دون تجريح.\nيقترح معالجة عملية.\nلا يساوي الرفق بترك المسؤولية.\nلا تعد صيغة هادئة بعينها إلزامية، ولا يستنتج قصد الإهانة من جملة محتملة.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "823e6f5486c9872af51984a4957081a2587f2bf977d707ed154a560d74e0725e"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.muslim-2594"
+      ]
+    },
+    {
+      "id": "understanding.public_blame",
+      "kind": "explanation",
+      "text": "ترى أن إحراج الزميل أمام الفريق يساعده على تجنب الخطأ.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "e9c983a1b97774d5a0b266346083cfbdfa6051551904c1665a846d8bf2845f25"
+      }
+    },
+    {
+      "id": "understanding.silence",
+      "kind": "explanation",
+      "text": "ترى أن تجنب الحديث عن الخطأ يحمي الزميل من الإحراج.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "e902c75a2823f2282b09a15795f7fa08a30d7d549c91ccd0de40352a9b3d73ef"
+      }
+    },
+    {
+      "id": "understanding.gentle_correction",
+      "kind": "explanation",
+      "text": "تريد معالجة الخطأ بوضوح مع حفظ كرامة الزميل.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "b8957e30f0f94d48af07145a0e1b63121d7cb44d30d692e92f141911f7533576"
+      }
+    },
+    {
+      "id": "feedback.clarification",
+      "kind": "prompt",
+      "text": "ما الرد الذي ستقوله لأختك، وما الخطوة العملية التي ستتخذها الآن؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "eee4968d90ace1e420b619f31718cc277f8fc255ec1192c71768dfe73c2c9e0c"
+      }
+    },
+    {
+      "id": "feedback.respect.definition",
+      "kind": "rubric",
+      "text": "يحدد الحاجة أو يقترح كلاما غير جارح في الرد على الأخت. لا يستنتج الاحترام من غياب الشتيمة وحده، ولا يصنف شتيمة منفية أو منقولة للرفض كتصرف مقترح. supported يعني اقتراحا يوافق هذا المعيار، وليس مجرد التعرف على كلمات المعيار. opposed: يقترح شتم الأخت أو إهانتها أو إحراجها صراحة. لا تحتاج الإجابة أن تسمي ذلك خطأ حتى تصنف معارضة.",
+      "version": "2.2.1",
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "7e67faf5495206cb8a0624d2e8ec0ae72d69c5fd3dca20b508ee247a0b404d7a"
+      }
+    },
+    {
+      "id": "feedback.respect.strength",
+      "kind": "explanation",
+      "text": "اقترحت توضيح الحاجة دون تجريح.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "7c3fcd9769600fe4b25e71db59d57c2536fbe56026ee34d36e235894fa7eff25"
+      }
+    },
+    {
+      "id": "feedback.respect.addition",
+      "kind": "explanation",
+      "text": "يمكنك توضيح ردك على أختك بعبارة تبين الحاجة دون تجريح.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "2b66796be0370cd5494c27263074c67224aba9e683456f8d5edbd9b185cb1a2d"
+      }
+    },
+    {
+      "id": "feedback.respect.concern",
+      "kind": "explanation",
+      "text": "توضيح الحاجة دون وصف جارح يساعد على معالجة الموقف.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "d33b7c05541365a7df7e8b35473e947bdb0eca7a73de99af6b588a3d6446b174"
+      }
+    },
+    {
+      "id": "feedback.respect.question",
+      "kind": "prompt",
+      "text": "كيف تعبر عن حاجتك للجهاز دون تجريح؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "96e847fb49d636cbfb71505651f32fa95a2b92cd505eb55960e578f3e8320ca0"
+      }
+    },
+    {
+      "id": "feedback.practical.definition",
+      "kind": "rubric",
+      "text": "يقترح حلا عمليا للدرس الآن، مثل استخدام الهاتف أو الشحن أو بديل مناسب. لا تشترط عبارة المثال أو حل الهاتف بعينه. supported يعني اقتراحا يوافق هذا المعيار، وليس مجرد التعرف على كلمات المعيار. opposed: يرفض كل حل متاح أو يصرح بترك الدرس رغم وجود بديل. مجرد عدم ذكر حل هو not_shown.",
+      "version": "2.2.1",
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "0db3334029f9aa85e9e1366766472c437fbc960768b818e3d29cf7b9527ef8da"
+      }
+    },
+    {
+      "id": "feedback.practical.strength",
+      "kind": "explanation",
+      "text": "اقترحت خطوة عملية للتعامل مع الدرس الآن.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "7f3604dd479f9691128c45300ee857a3b8d21d1d34652a87ce0d59aa3e1608c4"
+      }
+    },
+    {
+      "id": "feedback.practical.addition",
+      "kind": "explanation",
+      "text": "يمكنك إضافة خطوة عملية تمكنك من متابعة الدرس الآن.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "e09e49ec34a0b27abd3ff2b0d742bf5dd63a6d3d2b528cef7abdfa8da598320e"
+      }
+    },
+    {
+      "id": "feedback.practical.concern",
+      "kind": "explanation",
+      "text": "اللوم وحده لا يقدم حلا لمتابعة الدرس.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "5b4572086fc35783f62f1390fd6ebeb2cbfce6229f34e7c454c42df805c5e5f2"
+      }
+    },
+    {
+      "id": "feedback.practical.question",
+      "kind": "prompt",
+      "text": "ما البديل المتاح لحضور الدرس الآن؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "2a9274e963c4d376c795e4c1b8314bfeb781a3dfae9ea49e77719ecadc5da549"
+      }
+    },
+    {
+      "id": "feedback.agreement.definition",
+      "kind": "rubric",
+      "text": "يذكر الاتفاق أو المسؤولية أو يقترح ترتيبا لتجنب تكرار الموقف. لا تجعل تأجيل المناقشة لما بعد الدرس تخليا عن المسؤولية. supported يعني اقتراحا يوافق هذا المعيار، وليس مجرد التعرف على كلمات المعيار. opposed: يصرح بأن الاتفاق أو المسؤولية لا حاجة إليهما. مجرد الإهانة دون ذكر الاتفاق لا يثبت معارضة هذا المعيار.",
+      "version": "2.2.1",
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "28827c3fef58dc407b2aecd30e65dcb8e5ab12928e24a42957369ec391dc44cd"
+      }
+    },
+    {
+      "id": "feedback.agreement.strength",
+      "kind": "explanation",
+      "text": "راعيت الاتفاق أو اقترحت ترتيبا لتجنب تكرار الموقف.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "b342ed9901c41c35637e7db0d975b3e0f3d45d898ae55841b5fb5d85b4345e32"
+      }
+    },
+    {
+      "id": "feedback.agreement.addition",
+      "kind": "explanation",
+      "text": "يمكنك إضافة اتفاق أو تذكير يساعد على عدم تكرار الموقف.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "49e9ff6c9193f05e2de5c28b2685772311a638680ecf5de1b5d7d7c8d9f7432f"
+      }
+    },
+    {
+      "id": "feedback.agreement.concern",
+      "kind": "explanation",
+      "text": "الرفق يمكن أن يجتمع مع بيان الاتفاق والمسؤولية.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "110c8a77ed2c8bab4219b2fbf7698caf27e3b4b4cda6f8714e1646181cc7b6cf"
+      }
+    },
+    {
+      "id": "feedback.agreement.question",
+      "kind": "prompt",
+      "text": "ما الاتفاق المناسب بعد الدرس؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "509454969922367cb6495a4c3f87e6c23eba446b81e35ed80c4fba8115ed37cf"
+      }
+    },
+    {
+      "id": "assessment.choice.public_blame",
+      "kind": "rubric",
+      "value": "needs_correction",
+      "text": "التصرف المختار يحتاج مراجعة",
+      "version": 1,
+      "status": "draft",
+      "sourceIds": [
+        "source.muslim-2594"
+      ],
+      "rights": {
+        "status": "cleared",
+        "origin": "Original project assessment labels; new educational criteria await separate scientific review."
+      }
+    },
+    {
+      "id": "assessment.choice.gentle_correction",
+      "kind": "rubric",
+      "value": "appropriate",
+      "text": "التصرف المختار مناسب لهذا الموقف",
+      "version": 1,
+      "status": "draft",
+      "sourceIds": [
+        "source.muslim-2594"
+      ],
+      "rights": {
+        "status": "cleared",
+        "origin": "Original project assessment labels; new educational criteria await separate scientific review."
+      }
+    },
+    {
+      "id": "assessment.choice.silence",
+      "kind": "rubric",
+      "value": "contextual",
+      "text": "قد يناسب هذا التصرف ضغط الوقت في الموقف",
+      "version": 1,
+      "status": "draft",
+      "sourceIds": [
+        "source.muslim-2594"
+      ],
+      "rights": {
+        "status": "cleared",
+        "origin": "Original project assessment labels; new educational criteria await separate scientific review."
+      }
+    }
+  ],
+  "editorialAdoption": {
+    "by": "صاحبة المشروع",
+    "date": "2026-10-05",
+    "scope": "اعتماد المحتوى في تجربة التطوير وتنقيح الواجهة وربط المواقف الستة."
+  },
+  "religiousReview": {
+    "basis": "ملف المراجعة وتأكيد صاحبة المشروع",
+    "file": "قبس — للمراجعة الشرعية.pdf",
+    "sha256": "109e844053a0d67978a926a5e83fe459debd32aca4064f8b3867a76a730aec9e",
+    "scope": "الأدلة والمصادر وتوجيه تغيير موضوع الموقف السادس؛ لا ينسب اعتماد تحريري جديد إلى المختص."
+  },
+  "personalFeedbackScope": "تعليق تعليمي مقيد بمعيار الموقف، دون درجة أو حكم على التدين. الصياغات والمعيار مشتقان من المحتوى؛ لا ينسب اعتماد علمي جديد للمختص."
+}

@@ -1,0 +1,929 @@
+{
+  "schemaVersion": 1,
+  "topic": {
+    "id": "hope_in_what_we_dislike",
+    "version": "2.3.0",
+    "title": "صباح لم يسر كما خططت",
+    "value": "قد يكون فيما نكره خير",
+    "objective": "التمييز بين كراهية أمر والحكم على عاقبته، مع إدراك محدودية علم الإنسان ورجاء الخير والأخذ بالأسباب.",
+    "refs": {
+      "intro": "story.intro",
+      "question": "prompt.choice",
+      "reason": "prompt.reason",
+      "extra": "story.extra",
+      "revise": "prompt.revise",
+      "choices": [
+        "choice.negative_certainty",
+        "choice.humble_hope",
+        "choice.specific_unseen_claim"
+      ],
+      "followups": {
+        "negative_certainty": "followup.negative_certainty",
+        "specific_unseen_claim": "followup.specific_unseen_claim",
+        "humble_hope": "followup.humble_hope",
+        "inaction": "followup.inaction",
+        "clarify": "followup.clarify",
+        "general": "followup.general"
+      },
+      "comments": {
+        "negative_certainty": "comment.negative_certainty",
+        "humble_hope": "comment.humble_hope",
+        "specific_unseen_claim": "comment.specific_unseen_claim"
+      },
+      "explanation": "explanation.main",
+      "source": "source.quran-2-216",
+      "rubric": "rubric.transfer",
+      "transfer": "transfer.story",
+      "transferPrompt": "transfer.prompt",
+      "transferExample": "transfer.example",
+      "sourceContext": "source.context",
+      "understandings": {
+        "negative_certainty": "understanding.negative_certainty",
+        "specific_unseen_claim": "understanding.specific_unseen_claim",
+        "humble_hope": "understanding.humble_hope",
+        "inaction": "understanding.inaction"
+      },
+      "transferFeedback": {
+        "criteria": {
+          "uncertainty": {
+            "definition": "feedback.uncertainty.definition",
+            "strength": "feedback.uncertainty.strength",
+            "addition": "feedback.uncertainty.addition",
+            "concern": "feedback.uncertainty.concern",
+            "question": "feedback.uncertainty.question"
+          },
+          "hope": {
+            "definition": "feedback.hope.definition",
+            "strength": "feedback.hope.strength",
+            "addition": "feedback.hope.addition",
+            "concern": "feedback.hope.concern",
+            "question": "feedback.hope.question"
+          },
+          "action": {
+            "definition": "feedback.action.definition",
+            "strength": "feedback.action.strength",
+            "addition": "feedback.action.addition",
+            "concern": "feedback.action.concern",
+            "question": "feedback.action.question"
+          }
+        },
+        "clarification": "feedback.clarification"
+      },
+      "choiceAssessments": {
+        "negative_certainty": "assessment.choice.negative_certainty",
+        "humble_hope": "assessment.choice.humble_hope",
+        "specific_unseen_claim": "assessment.choice.specific_unseen_claim"
+      }
+    }
+  },
+  "provenance": {
+    "kind": "new_draft_following_review_direction",
+    "replaces_topic": "اجتناب سب الدهر",
+    "review_scope": "أقرت المستخدمة اتجاه التغيير والدليل. الصياغة الجديدة لم يرد اعتماد الشيخ لها.",
+    "body_changes": "تصحيح معرّفات الخيارات واختصار تعليمات الكتابة؛ الموقف السادس صياغة وفق توجيه المختص."
+  },
+  "reviewScope": "اعتماد تحريري من صاحبة المشروع؛ مراجعة المختص للأدلة والمصادر وتوجيه الموقف السادس محفوظة منفصلة.",
+  "reviewInputSha256": "7e2f895fbf06c2bcbfc41937a2c66659b8b71be762f935aacb7868dc813db073",
+  "records": [
+    {
+      "id": "story.intro",
+      "kind": "story",
+      "text": "لديك موعد لإنجاز معاملة الساعة الثامنة صباحا. خرجت قبل الموعد بساعة، لكن سيارة الأجرة تأخرت، ثم ازدحم الطريق.\n\nوصلت بعد موعدك بنصف ساعة، وأخبرك الموظف بأنك تحتاج إلى حجز موعد جديد. ضاق صدرك لأنك كنت تريد إنهاء المعاملة اليوم.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "fb824abbf39c4ad9d88a64a96a8aaecccc7d470230a1fcd0c49d09beb88bc119"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "prompt.choice",
+      "kind": "prompt",
+      "text": "أي عبارة أقرب إلى نظرتك للموقف؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "44bf67be9bd2aef87397d964f4278cb29140f467069d8e3eb77bb7c25c9deede"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "prompt.reason",
+      "kind": "prompt",
+      "text": "ما سبب اختيارك؟",
+      "version": 2,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "ba33bd71d4d50606abb4590971c29c35501762a62514d9671925688235d495e8"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "choice.negative_certainty",
+      "kind": "choice",
+      "text": "فاتني الموعد، إذن ما حدث شر من كل جهة ولا يمكن أن يكون فيه خير.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "24b0125626651900f598118d8da98d2d1605eb1037d66735863070ddc7492483"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "value": "negative_certainty"
+    },
+    {
+      "id": "choice.humble_hope",
+      "kind": "choice",
+      "text": "ضايقني فوات الموعد، لكنني لا أعرف عاقبته كاملة، وقد يكون فيه خير لا أراه الآن.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "30838bb161174c5f3eea0e84f1c6126a4ebac2f043b26cc188e9d109e5deeb1c"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "value": "humble_hope"
+    },
+    {
+      "id": "choice.specific_unseen_claim",
+      "kind": "choice",
+      "text": "أنا متأكد أن الموعد فات حتى أحصل على نتيجة أفضل، وأعرف أن هذا هو سبب التأخير.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "faf5a5e421bc4bebaf425b3f4144555c114dd9cde7bb2f0bc15d0a78d9056f38"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "value": "specific_unseen_claim"
+    },
+    {
+      "id": "story.extra",
+      "kind": "story",
+      "text": "عند التواصل مع الجهة عرفت أنه يمكنك إكمال بعض الإجراءات إلكترونيا، لكنك قد تحتاج إلى زيارة لاحقة، ولم يتضح بعد موعد انتهاء المعاملة.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "f9f8aff0f456a6bd28f233b71b04f3982c85cad000baaafb70e1b7e0730f9b9e"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "prompt.revise",
+      "kind": "prompt",
+      "text": "هل تبقى نظرتك للموقف كما هي أم تتغير؟ وما الذي تعرفه عن عاقبته وما الذي لا تعرفه؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "493f1fe7d5e4e2c4278cde4cfcad00daeece5e1f92c3d9683795fc7467e556b0"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "followup.negative_certainty",
+      "kind": "followup",
+      "text": "ما الخطوة التي يمكنك فعلها الآن رغم أنك لا تعرف عاقبة الموقف كاملة؟",
+      "version": 2,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب متابعة تضيف زاوية جديدة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "5b923eb0c9656cf6799e59ef7fc1d12b86591ec403192f41640fae9d6d178dc3"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "condition": "إذا حكم المتعلم بأن الموقف شر من كل جهة: «هل ضيقك الآن يكفي لمعرفة جميع نتائج هذا الموقف؟ ولماذا؟»"
+    },
+    {
+      "id": "followup.specific_unseen_claim",
+      "kind": "followup",
+      "text": "ما الفرق بين رجاء أن يكون في الأمر خير، والجزم بسبب حدوثه أو بنتيجته؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "7569eb0e348f1889a44f589a3845aa75aaad81eba94219a7dd729e3fa6a15cc2"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "condition": "إذا جزم بسبب خفي أو بنتيجة أفضل محددة: «ما الفرق بين رجاء أن يكون في الأمر خير، والجزم بسبب حدوثه أو بنتيجته؟»"
+    },
+    {
+      "id": "followup.humble_hope",
+      "kind": "followup",
+      "text": "إذا لم يظهر لك وجه الخير قريبا، فكيف تصف ما تعرفه وما لا تعرفه؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "b31cc86b94568614117b8e1fca1b4d4a26202f6196af01ac3bd1b86fa1f2feba"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "condition": "إذا جمع بين رجاء الخير وعدم الجزم بالعاقبة: «إذا لم يظهر لك وجه الخير قريبا، فكيف تصف ما تعرفه وما لا تعرفه؟»"
+    },
+    {
+      "id": "followup.inaction",
+      "kind": "followup",
+      "text": "كيف تجمع بين رجاء الخير ومتابعة ما تستطيع فعله لإنهاء المعاملة؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "bd1717077de5b769b84d0131f1fcfa171026934061ed86a8cf1ededed0dc1588"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "condition": "إذا فهم رجاء الخير على أنه ترك الإجراءات: «كيف تجمع بين رجاء الخير ومتابعة ما تستطيع فعله لإنهاء المعاملة؟»"
+    },
+    {
+      "id": "followup.clarify",
+      "kind": "followup",
+      "text": "ما الفكرة التي اعتمدت عليها في اختيارك؟ يمكنك كتابة: لا أعرف.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "509a30a374712a1094d6125aea235c34bb1586001de1fb5529a4bda3c546bc74"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "followup.general",
+      "kind": "followup",
+      "text": "هل تبقى نظرتك للموقف كما هي أم تتغير؟ وما الذي تعرفه عن عاقبته وما الذي لا تعرفه؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "d81dd68a09a85e54dfc3bd421dabbf260e755c15e6748f742ca3d100f368cdcd"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "comment.negative_certainty",
+      "kind": "explanation",
+      "text": "فوات الموعد أمر أزعجك بالفعل، لكن هذا وحده لا يكشف جميع عواقبه ولا يثبت أنه خال من كل خير.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "22fc89ef3d8e39fb036a35a0b47e2e44dce6dfc97cd4c5903d47c78dd3be1f11"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.quran-2-216"
+      ]
+    },
+    {
+      "id": "comment.humble_hope",
+      "kind": "explanation",
+      "text": "فرقت بين شعورك الحالي وبين معرفتك بالعاقبة، ورجوت الخير دون الجزم بتفاصيل لا تعلمها.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "8a8ea66850d061583e911daf58ba1ef3c4d5c0b34f74cc13648da9662ef78f03"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.quran-2-216"
+      ]
+    },
+    {
+      "id": "comment.specific_unseen_claim",
+      "kind": "explanation",
+      "text": "يمكنك رجاء الخير، لكن ليس لدينا ما يثبت أن هذه النتيجة المحددة هي سبب التأخير أو أنها ستقع حتما.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "6d188e11702a5d145fd15ad421b7b1782241901b749a7f6d73c5841b75460d1e"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.quran-2-216"
+      ]
+    },
+    {
+      "id": "explanation.main",
+      "kind": "explanation",
+      "text": "قد يكره الإنسان أمرا ويكون فيه خير له، وقد يحب أمرا ولا تكون عاقبته كما يتمنى. علمنا بالعواقب محدود، والله يعلم ونحن لا نعلم.\n\nفي هذه القصة لا نعرف سببا خفيا لفوات الموعد، ولا نعد بنتيجة دنيوية أفضل محددة. يمكنك رجاء الخير ومتابعة الإجراءات المتاحة. لا يطلب منك إخفاء شعورك بالضيق حتى تعبر عن هذا الفهم.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "511bbfb4c8a635fa14f0fd7af62d2a9c5c3cd2283cdb0124354999ac4d39ca15"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.quran-2-216"
+      ]
+    },
+    {
+      "id": "source.quran-2-216",
+      "kind": "source",
+      "text": "﴿وَعَسَىٰ أَن تَكْرَهُوا شَيْئًا وَهُوَ خَيْرٌ لَّكُمْ ۖ وَعَسَىٰ أَن تُحِبُّوا شَيْئًا وَهُوَ شَرٌّ لَّكُمْ ۗ وَاللَّهُ يَعْلَمُ وَأَنتُمْ لَا تَعْلَمُونَ﴾",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "evidence",
+        "hash": "2b6d5bdb06bb6959621f5be28ffcf0c5767518f889a0315e2a72df999b7ecb57"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "citation": "مقتطف من سورة البقرة، الآية ٢١٦.",
+      "url": "https://quran.ksu.edu.sa/tafseer/saadi/sura2-aya216.html",
+      "excerpt": true,
+      "verification": {
+        "status": "matched_to_reference",
+        "checked_on": "2026-10-05"
+      }
+    },
+    {
+      "id": "transfer.story",
+      "kind": "story",
+      "text": "تقدمت إلى نشاط كنت ترغب في المشاركة فيه، ثم وصلتك رسالة اعتذار بسبب اكتمال المقاعد. شعرت بخيبة أمل، ولا تعرف بعد إن كانت ستتاح فرصة أخرى.\n\nيقول صديقك: «أكيد سيعوضونك بنشاط أفضل الأسبوع القادم». ولم يصلك إعلان يؤكد ذلك.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "c2e61e15b62685f59c148f759d7da4846d094dee250bbff44fd9dd96ebcad9ec"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "transfer.prompt",
+      "kind": "prompt",
+      "text": "ما ردك على صديقك؟ وكيف تنظر إلى ما حدث وما يمكنك فعله الآن؟",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "699fb81b6715dc6e3dec6114252ef270d8a7c480ad6565f7455c08a1be02668f"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      }
+    },
+    {
+      "id": "transfer.example",
+      "kind": "example",
+      "text": "«أنا متضايق لأنني كنت أريد المشاركة، وأرجو أن يكون فيما حدث خير، لكننا لا نعرف إن كانت هناك فرصة أفضل الأسبوع القادم. أستطيع السؤال عن قائمة الانتظار أو البحث عن نشاط مناسب آخر».\n\nتقبل صيغ أخرى يظهر فيها المعنى نفسه، ولا يشترط ترديد عبارة معينة أو إنكار الحزن.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "907c9e4ea4733aee8142f72a06b205306c085b76bf71a299e1ae4d4e4aba4c36"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.quran-2-216"
+      ]
+    },
+    {
+      "id": "rubric.transfer",
+      "kind": "rubric",
+      "text": "يميز المتعلم بين عدم محبة الحدث وبين الجزم بأنه شر من كل وجه.\nيدرك أن علمه بعاقبة الأمر محدود، ويرجو الخير دون تأكيد نتيجة محددة لا دليل عليها.\nلا يشترط معرفة وجه الخير أو ظهوره سريعا لإثبات فهم الفكرة.\nلا يحكم على إيمان المتعلم أو نيته، ولا يصنف الحزن أو الضيق وحدهما بوصفهما خطأ في الفهم.\nلا يمنح ترديد عبارة تفاؤل وحدها حكما آليا بإتقان الفهم؛ ينظر إلى السبب أو يطلب توضيحا.\nذكر خطوة عملية يدعم جانب الأخذ بالأسباب، لكنه لا يكفي وحده لإثبات فهم حدود العلم بالعواقب.\nإذا اقترح ترك السعي لأن الخير سيأتي حتما، يطرح سؤال متابعة قبل استنتاج فهمه.\nلا تعمم القصة على قبول الظلم أو ترك طلب المساعدة ورفع الضرر.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "cfb602621d8592a9e544ee9c9f891fffa7179215cfd269ea3149529fef5b3947"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.quran-2-216"
+      ]
+    },
+    {
+      "id": "source.context",
+      "kind": "explanation",
+      "text": "وردت الآية في سياق فرض القتال. ويبين تفسير السعدي الفرق بين أفعال الخير والشر وبين أحوال الدنيا التي ليست مطردة على وجه واحد. التطبيق هنا يقتصر على رجاء الخير ومحدودية معرفة العواقب، دون ادعاء معرفة الغيب.",
+      "version": 1,
+      "status": "approved",
+      "approval": {
+        "reviewer": "صاحبة المشروع — اعتماد تحريري، وتأكيد مراجعة الأدلة",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "8a4171e71f5ddda75b704234028e8982b6d74b83eadce6a7e2df193e3522aad1"
+      },
+      "rights": {
+        "status": "pending",
+        "origin": "User supplied religious review: evidence-only scope; teaching and rubrics remain drafts"
+      },
+      "sourceIds": [
+        "source.quran-2-216"
+      ]
+    },
+    {
+      "id": "understanding.negative_certainty",
+      "kind": "explanation",
+      "text": "تجزم بأن الموقف لا يمكن أن يكون فيه أي خير.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "9d1ba8df90a23f5ee7c196fb540b5038ab23e27cbfdefc46c0c5a698d78ae2b8"
+      }
+    },
+    {
+      "id": "understanding.specific_unseen_claim",
+      "kind": "explanation",
+      "text": "تجزم بسبب خفي للتأخير أو بنتيجة أفضل محددة.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "5de1340ac620b85a92b57e5d8c69877d0afdbbbb05dda3db2e3e5516bc5d4af2"
+      }
+    },
+    {
+      "id": "understanding.humble_hope",
+      "kind": "explanation",
+      "text": "ترجو الخير مع الإقرار بأنك لا تعرف العاقبة كاملة.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "21673dbf45c5631b7cf627c8021d004495a7ba63abc12fa1122d5f711db144d2"
+      }
+    },
+    {
+      "id": "understanding.inaction",
+      "kind": "explanation",
+      "text": "ترى أن رجاء الخير يغني عن متابعة الإجراءات.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "4a2eac60be4f1528b0d20fcdfa9865710cf001a9abc3119db4e2b4818347e0c8"
+      }
+    },
+    {
+      "id": "feedback.clarification",
+      "kind": "prompt",
+      "text": "ما الذي تعرفه عن الفرصة القادمة، وما الذي ترجوه دون أن تجزم به؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "159eab6c1e9cf19471478188a191229ea965b4c0b09ab986d5befdde32aa04b8"
+      }
+    },
+    {
+      "id": "feedback.uncertainty.definition",
+      "kind": "rubric",
+      "text": "يميز بين رجاء الخير والجزم بفرصة أفضل الأسبوع القادم أو بسبب خفي. «إن شاء الله خير» لا تعد جزما بالغيب، لكنها وحدها لا تثبت توضيح حدود العلم. الحزن والضيق ليسا معارضة لهذا المعيار. supported يعني اقتراحا يوافق هذا المعيار، وليس مجرد التعرف على كلمات المعيار. opposed: يجزم بفرصة أفضل الأسبوع القادم دون إعلان يؤكدها، أو يجزم بسبب خفي لا يعرفه. «إن شاء الله خير» أو «أتمنى فرصة أفضل» لا يعدان جزما.",
+      "version": "2.2.1",
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "63a3a6640b85a343ecb473cfb05ff29767774f85b4a99468a3a3f5f884b35313"
+      }
+    },
+    {
+      "id": "feedback.uncertainty.strength",
+      "kind": "explanation",
+      "text": "ميزت بين ما تعرفه عن الفرصة وما لا تستطيع الجزم به.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "d659b588dbedc9e5cc6ef52b7f0ec475a9b0917f5c031c2c3856005141041f0d"
+      }
+    },
+    {
+      "id": "feedback.uncertainty.addition",
+      "kind": "explanation",
+      "text": "يمكنك توضيح ما تعرفه وما لا تعرفه عن الفرصة القادمة.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "f936e2fabe193eebca3f5417cd10c8cc0497f5497f7a2b438c4cf412b1323c08"
+      }
+    },
+    {
+      "id": "feedback.uncertainty.concern",
+      "kind": "explanation",
+      "text": "لم يرد إعلان يؤكد فرصة أفضل الأسبوع القادم؛ الرجاء يختلف عن الجزم بنتيجة محددة.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "9b3996dd85f790ee5a831ab8bfab5f25f07203bef48986a872cbaacc968abd59"
+      }
+    },
+    {
+      "id": "feedback.uncertainty.question",
+      "kind": "prompt",
+      "text": "ما الدليل على فرصة الأسبوع القادم، وما الذي لا تعرفه بعد؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "5514b2c8cf0bc1b4c7510c603d0e6a2345e2bba4980a644c075f7861e47827fe"
+      }
+    },
+    {
+      "id": "feedback.hope.definition",
+      "kind": "rubric",
+      "text": "يرجو الخير أو يقر بإمكانه دون ضمان نتيجة محددة؛ لا يشترط إنكار الحزن أو رؤية وجه الخير سريعا، ولا يحكم على الإيمان. supported يعني اقتراحا يوافق هذا المعيار، وليس مجرد التعرف على كلمات المعيار. opposed: يجزم بأن ما حدث لا خير فيه من أي جهة. الجزم بفرصة أفضل يخالف معيار حدود العلم؛ لا تستخدم هذا المعيار لتكرار الحكم نفسه.",
+      "version": "2.2.1",
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "1a0182bd67e0b91307b99b08d919bcd0f248b6329ed06d9eb84e0e80e9935a16"
+      }
+    },
+    {
+      "id": "feedback.hope.strength",
+      "kind": "explanation",
+      "text": "عبرت عن رجاء الخير دون الحاجة إلى إنكار شعورك بالضيق.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "d74db3c143924c4d9a7b6c33491c5dd084094dd55fd8b7b4bc75845b6394f137"
+      }
+    },
+    {
+      "id": "feedback.hope.addition",
+      "kind": "explanation",
+      "text": "يمكنك الجمع بين وصف ضيقك ورجاء أن يكون فيما حدث خير.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "60718fdf6349210dd9bea50db8b5702c6c0b43ce5b3b7bf4ccdb31bb638a6d55"
+      }
+    },
+    {
+      "id": "feedback.hope.concern",
+      "kind": "explanation",
+      "text": "الجزم بأن ما حدث خال من كل خير يتجاوز ما نعرفه من الموقف؛ الضيق وحده ليس هذا الجزم.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "1ec8228953f21a05fb7e591ea83a1927e5b8e3255a1652988b7ebf0506d08e13"
+      }
+    },
+    {
+      "id": "feedback.hope.question",
+      "kind": "prompt",
+      "text": "كيف تجمع بين شعورك الآن ورجاء الخير؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "27c59e5ca5798b04d6bebeb7b6dbae742a30db92fb96626daf54581254b454af"
+      }
+    },
+    {
+      "id": "feedback.action.definition",
+      "kind": "rubric",
+      "text": "يذكر خطوة متاحة، مثل السؤال عن قائمة الانتظار أو نشاط آخر؛ لا يجعل خطوة عملية وحدها دليلا على فهم حدود العلم، ولا يصنف طلب دعم أو رفع ظلم في غير هذه القصة تخليا عن السعي. supported يعني اقتراحا يوافق هذا المعيار، وليس مجرد التعرف على كلمات المعيار. opposed: يصرح بترك السعي أو الخيارات لأن نتيجة أفضل مضمونة. مجرد عدم ذكر خطوة هو not_shown.",
+      "version": "2.2.1",
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "5b22ce1b00fc924a18ac1d770919efcb34dbc2ef1a87756bbae8a8e8a1f8def4"
+      }
+    },
+    {
+      "id": "feedback.action.strength",
+      "kind": "explanation",
+      "text": "ذكرت خطوة عملية متاحة للتعامل مع الموقف.",
+      "version": "2.2.1",
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "bdd422ebd15198066b1fdb0782338f55489ad2e799d75a3018b5d68b8eb12220"
+      }
+    },
+    {
+      "id": "feedback.action.addition",
+      "kind": "explanation",
+      "text": "يمكنك إضافة خطوة متاحة، مثل السؤال عن قائمة الانتظار أو بديل مناسب.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "7e26233438e799eeca8812c1595589258131a647cc6203aa9c0aba6853d1b6d6"
+      }
+    },
+    {
+      "id": "feedback.action.concern",
+      "kind": "explanation",
+      "text": "رجاء الخير لا يمنع متابعة الخيارات المتاحة.",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "14a5d37d1e22cb760838c4dfa61c890e31cfb19b10b77e6853e18412509c89b9"
+      }
+    },
+    {
+      "id": "feedback.action.question",
+      "kind": "prompt",
+      "text": "ما الخطوة المتاحة لك الآن؟",
+      "version": 1,
+      "status": "approved",
+      "rights": {
+        "status": "pending",
+        "origin": "Owner-requested personalized learning feedback; derived from existing lesson rubric, scientific review distinct."
+      },
+      "approval": {
+        "reviewer": "صاحبة المشروع — طلب إضافة التفسير والتعليق الشخصي",
+        "reviewedAt": "2026-10-05",
+        "scope": "editorial",
+        "hash": "b8dbe5181e3d8fee8bbf6f1ed9afadd305e476abf59f1ef14998679e066fac65"
+      }
+    },
+    {
+      "id": "assessment.choice.negative_certainty",
+      "kind": "rubric",
+      "value": "needs_correction",
+      "text": "التصرف المختار يحتاج مراجعة",
+      "version": 1,
+      "status": "draft",
+      "sourceIds": [
+        "source.quran-2-216"
+      ],
+      "rights": {
+        "status": "cleared",
+        "origin": "Original project assessment labels; new educational criteria await separate scientific review."
+      }
+    },
+    {
+      "id": "assessment.choice.humble_hope",
+      "kind": "rubric",
+      "value": "appropriate",
+      "text": "التصرف المختار مناسب لهذا الموقف",
+      "version": 1,
+      "status": "draft",
+      "sourceIds": [
+        "source.quran-2-216"
+      ],
+      "rights": {
+        "status": "cleared",
+        "origin": "Original project assessment labels; new educational criteria await separate scientific review."
+      }
+    },
+    {
+      "id": "assessment.choice.specific_unseen_claim",
+      "kind": "rubric",
+      "value": "needs_correction",
+      "text": "التصرف المختار يحتاج مراجعة",
+      "version": 1,
+      "status": "draft",
+      "sourceIds": [
+        "source.quran-2-216"
+      ],
+      "rights": {
+        "status": "cleared",
+        "origin": "Original project assessment labels; new educational criteria await separate scientific review."
+      }
+    }
+  ],
+  "editorialAdoption": {
+    "by": "صاحبة المشروع",
+    "date": "2026-10-05",
+    "scope": "اعتماد المحتوى في تجربة التطوير وتنقيح الواجهة وربط المواقف الستة."
+  },
+  "religiousReview": {
+    "basis": "ملف المراجعة وتأكيد صاحبة المشروع",
+    "file": "قبس — للمراجعة الشرعية.pdf",
+    "sha256": "109e844053a0d67978a926a5e83fe459debd32aca4064f8b3867a76a730aec9e",
+    "scope": "الأدلة والمصادر وتوجيه تغيير موضوع الموقف السادس؛ لا ينسب اعتماد تحريري جديد إلى المختص."
+  },
+  "personalFeedbackScope": "تعليق تعليمي مقيد بمعيار الموقف، دون درجة أو حكم على التدين. الصياغات والمعيار مشتقان من المحتوى؛ لا ينسب اعتماد علمي جديد للمختص."
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "qabas",
+  "pages_build_output_dir": "./dist/cloudflare",
+  "compatibility_date": "2026-10-06",
+  "vars": {"QABAS_PUBLIC_ORIGIN": "https://qabas-70m.pages.dev"}
+}
