@@ -88,7 +88,7 @@ test('Pages diagnostics contain only operation codes, never answers, credentials
   const handle=handler({onFailure:event=>diagnostics.push(event),fetchImpl:async()=>new Response(key+' '+input.revised.reason,{status:401})});
   const r=await handle(request('/api/reflect',{method:'POST',body:JSON.stringify(input)}),env);
   assert.deepEqual(await r.json(),{route:'general',status:'unavailable',evidence:''});
-  assert.deepEqual(diagnostics,[{event:'qabas_model_failure',task:'reason',status:'unavailable',httpStatus:401}]);
+  assert.deepEqual(diagnostics,[{event:'qabas_model_failure',task:'reason',status:'unavailable',httpStatus:401,reason:'upstream_non_json'}]);
   assert.ok(!JSON.stringify(diagnostics).includes(key));assert.ok(!JSON.stringify(diagnostics).includes(input.revised.reason));
   const throws=handler({onFailure:()=>{throw Error('logger failed');},fetchImpl:async()=>new Response('',{status:503})});
   assert.equal((await throws(request('/api/reflect',{method:'POST',body:JSON.stringify(input)}),env)).status,200);

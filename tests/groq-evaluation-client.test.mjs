@@ -55,6 +55,23 @@ test('HTTP and network failures return safe errors',async()=>{
  const networkResult=await client(async()=>{throw Error('test-secret');})(input);assert.equal(networkResult.reason,'network_error');assert.ok(!JSON.stringify([httpResult,networkResult]).includes('test-secret'));
 });
 
+test('Upstream errors expose only a fixed category, with bounded reads',async()=>{
+ for(const [error,category] of [
+  [{code:'json_validate_failed',message:'test-secret '+decision.reason},'upstream_schema'],
+  [{type:'invalid_request_error',message:'test-secret '+decision.reason},'upstream_request'],
+  [{code:'model_not_found'},'upstream_model'],
+  [{code:'context_length_exceeded'},'upstream_context'],
+  [{code:decision.reason,type:'test-secret',message:'unknown'},'upstream_other']
+ ]){
+  const result=await client(async()=>Response.json({error},{status:400}))(input);
+  assert.equal(result.reason,category);
+  assert.ok(!JSON.stringify(result).includes('test-secret'));
+  assert.ok(!JSON.stringify(result).includes(decision.reason));
+ }
+ const large=await client(async()=>new Response(JSON.stringify({error:{message:'x'.repeat(9000)}}),{status:400,headers:{'content-type':'application/json'}}))(input);
+ assert.equal(large.reason,'upstream_other');
+});
+
 test('An actual HTTP redirect is rejected without forwarding the key or retrying',async()=>{
  let forwarded=0,calls=0;
  const destination=http.createServer((_request,res)=>{forwarded++;res.end('unexpected');});

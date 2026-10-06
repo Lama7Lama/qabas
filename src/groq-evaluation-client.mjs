@@ -4,6 +4,24 @@ import {payloadHasContactData} from './privacy.mjs';
 export const MODEL = 'openai/gpt-oss-120b';
 export const ENDPOINT = 'https://api.groq.com/openai/v1/chat/completions';
 const discard = async response => { try { await response.body?.cancel(); } catch {} };
+// Only fixed operational categories leave the transport. Upstream error text can
+// echo a learner's answer or credentials and must never be returned or logged.
+export const SAFE_FAILURE_REASONS = Object.freeze(['network_error','cancelled_or_timeout','invalid_response','incomplete_or_refused','invalid_json','invalid_output','upstream_non_json','upstream_schema','upstream_model','upstream_context','upstream_auth','upstream_request','upstream_other']);
+async function failureReason(response) {
+  if(!response.headers.get('content-type')?.includes('application/json')) { await discard(response); return 'upstream_non_json'; }
+  let data;
+  try { data=await boundedJson(response,8192); } catch { return 'upstream_other'; }
+  const error=data?.error;
+  const code=typeof error?.code==='string'?error.code:'';
+  const type=typeof error?.type==='string'?error.type:'';
+  const message=typeof error?.message==='string'?error.message:'';
+  if(['json_validate_failed','schema_validation_error'].includes(code)||/json.schema|response_format|schema validation/i.test(message))return 'upstream_schema';
+  if(['model_not_found','model_decommissioned'].includes(code))return 'upstream_model';
+  if(code==='context_length_exceeded')return 'upstream_context';
+  if(['invalid_api_key','authentication_error'].includes(code)||type==='authentication_error')return 'upstream_auth';
+  if(type==='invalid_request_error')return 'upstream_request';
+  return 'upstream_other';
+}
 const retrySeconds = value => value && /^\d+(?:\.\d+)?$/.test(value) && Number.isFinite(Number(value)) ? Number(value) : null;
 function usageOf(value) {
   const usage = {};
@@ -47,7 +65,7 @@ export function createGroqStructuredClient({prepare, apiKey = globalThis.process
           response_format: {type: 'json_schema', json_schema: {name: 'reason_classification', strict: true, schema:prepared.schema}}})
       });
       if (response.status === 429) { await discard(response); return {status: 'rate_limited', retry_after_seconds: retrySeconds(response.headers.get('retry-after')), ...meta()}; }
-      if (!response.ok) { await discard(response); return {status: 'unavailable', http_status: response.status, ...meta()}; }
+      if (!response.ok) { return {status: 'unavailable', http_status: response.status, reason:await failureReason(response), ...meta()}; }
       let data;
       try { data = await boundedJson(response); }
       catch { return {status: combinedSignal.aborted ? 'unavailable' : 'invalid', reason:combinedSignal.aborted?'cancelled_or_timeout':'invalid_response', ...meta()}; }

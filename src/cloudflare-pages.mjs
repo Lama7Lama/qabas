@@ -1,4 +1,5 @@
 import {createLessonAIService} from './lesson-ai-core.mjs';
+import {SAFE_FAILURE_REASONS} from './groq-evaluation-client.mjs';
 
 const headers = {
   'Cache-Control':'no-store', 'X-Content-Type-Options':'nosniff',
@@ -78,7 +79,7 @@ export function createPagesHandler({lessons,assetPaths,fetchImpl=globalThis.fetc
         if(['unavailable','invalid','rate_limited','budget_exhausted'].includes(result.status)){
           const diagnostic={event:'qabas_model_failure',task:transfer?'transfer':'reason',status:result.status};
           if(Number.isInteger(result.runtime?.httpStatus))diagnostic.httpStatus=result.runtime.httpStatus;
-          if(['network_error','cancelled_or_timeout','invalid_response','incomplete_or_refused','invalid_json','invalid_output'].includes(result.runtime?.reason))diagnostic.reason=result.runtime.reason;
+          if(SAFE_FAILURE_REASONS.includes(result.runtime?.reason))diagnostic.reason=result.runtime.reason;
           try{onFailure(diagnostic);}catch{}
         }
         return send(200,transfer?{status:result.status,strengths:result.strengths,additions:result.additions}:{route:result.route,status:result.status,evidence:result.evidence});

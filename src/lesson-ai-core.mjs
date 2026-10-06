@@ -2,7 +2,7 @@ import {validReason} from './web/flow.js';
 import {hasContactData} from './privacy.mjs';
 import {boundedJson} from './model-response.mjs';
 import {MODEL as LOCAL_MODEL,ENDPOINT as LOCAL_ENDPOINT} from './local-model.mjs';
-import {createGroqStructuredClient,MODEL as GROQ_MODEL} from './groq-evaluation-client.mjs';
+import {createGroqStructuredClient,MODEL as GROQ_MODEL,SAFE_FAILURE_REASONS} from './groq-evaluation-client.mjs';
 import {excerptOptions} from './grounding.mjs';
 import {prepareTransfer,prepareTransferAudit,publishTransferFeedback} from './transfer-feedback.mjs';
 
@@ -64,7 +64,7 @@ export function createLessonAIService({lessons,provider=globalThis.process?.env?
     if([input.initial.reason,input.revised.reason].some(hasContactData))return {route:'general',evidence:'',status:'privacy',calledModel:false};
     const result=await run({task:'reason',input},{signal});
     if(result.status==='classified')return {...result.analysis,status:result.analysis.route==='clarify'?'unclear':result.analysis.route==='general'?'general':'ok',calledModel:true};
-    return {route:'general',evidence:'',status:{blocked_privacy:'privacy',invalid_input:'invalid'}[result.status]||result.status,calledModel:cloud?!!result.request_number:true,...(cloud&&result.request_number?{runtime:{latencyMs:result.latency_ms,...(Number.isInteger(result.http_status)?{httpStatus:result.http_status}:{}),...(['network_error','cancelled_or_timeout','invalid_response','incomplete_or_refused','invalid_json','invalid_output'].includes(result.reason)?{reason:result.reason}:{})}}:{})};
+    return {route:'general',evidence:'',status:{blocked_privacy:'privacy',invalid_input:'invalid'}[result.status]||result.status,calledModel:cloud?!!result.request_number:true,...(cloud&&result.request_number?{runtime:{latencyMs:result.latency_ms,...(Number.isInteger(result.http_status)?{httpStatus:result.http_status}:{}),...(SAFE_FAILURE_REASONS.includes(result.reason)?{reason:result.reason}:{})}}:{})};
   },async feedback(input,{signal}={}){
     prepareTransfer(input,lessons);
     if(hasContactData(input.answer))return {status:'privacy',strengths:[],additions:[]};
