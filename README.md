@@ -19,8 +19,6 @@ npm run check:cloudflare
 
 للتطوير المحلي: `npm run build` ثم `npm run serve:groq`، مع `GROQ_API_KEY` في `.env.local` المستثنى من Git.
 
-للنشر على Cloudflare Pages: `npm run deploy:cloudflare`. الناتج `dist/cloudflare`، والمفتاح في Secrets فقط. رفع المصدر إلى GitHub لا ينشر الموقع تلقائيا.
-
 ## التوثيق
 
 [الاستضافة والخصوصية](docs/CLOUDFLARE.md) · [الأمان](docs/SECURITY.md) · [المحتوى والمراجعة](docs/CONTENT_REVIEW.md) · [المصادر والتراخيص](docs/THIRD_PARTY.md).
