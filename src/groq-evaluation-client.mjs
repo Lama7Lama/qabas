@@ -6,7 +6,7 @@ export const ENDPOINT = 'https://api.groq.com/openai/v1/chat/completions';
 const discard = async response => { try { await response.body?.cancel(); } catch {} };
 // Only fixed operational categories leave the transport. Upstream error text can
 // echo a learner's answer or credentials and must never be returned or logged.
-export const SAFE_FAILURE_REASONS = Object.freeze(['network_error','cancelled_or_timeout','invalid_response','incomplete_or_refused','invalid_json','invalid_output','upstream_non_json','upstream_schema','upstream_model','upstream_context','upstream_auth','upstream_request','upstream_other']);
+export const SAFE_FAILURE_REASONS = Object.freeze(['network_error','cancelled_or_timeout','invalid_response','incomplete_or_refused','invalid_json','invalid_output','upstream_non_json','upstream_schema_generation','upstream_schema_enum','upstream_schema_complex','upstream_schema_strict','upstream_schema_required','upstream_schema','upstream_model','upstream_context','upstream_auth','upstream_request','upstream_other']);
 async function failureReason(response) {
   if(!response.headers.get('content-type')?.includes('application/json')) { await discard(response); return 'upstream_non_json'; }
   let data;
@@ -15,7 +15,15 @@ async function failureReason(response) {
   const code=typeof error?.code==='string'?error.code:'';
   const type=typeof error?.type==='string'?error.type:'';
   const message=typeof error?.message==='string'?error.message:'';
-  if(['json_validate_failed','schema_validation_error'].includes(code)||/json.schema|response_format|schema validation/i.test(message))return 'upstream_schema';
+  if(code==='json_validate_failed')return 'upstream_schema_generation';
+  if(/json.schema|response_format|schema validation/i.test(message)){
+    if(/enum/i.test(message))return 'upstream_schema_enum';
+    if(/complex|size|too (?:many|large)/i.test(message))return 'upstream_schema_complex';
+    if(/strict/i.test(message))return 'upstream_schema_strict';
+    if(/required|additionalProperties/i.test(message))return 'upstream_schema_required';
+    return 'upstream_schema';
+  }
+  if(code==='schema_validation_error')return 'upstream_schema';
   if(['model_not_found','model_decommissioned'].includes(code))return 'upstream_model';
   if(code==='context_length_exceeded')return 'upstream_context';
   if(['invalid_api_key','authentication_error'].includes(code)||type==='authentication_error')return 'upstream_auth';

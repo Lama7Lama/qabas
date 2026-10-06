@@ -57,8 +57,11 @@ test('HTTP and network failures return safe errors',async()=>{
 
 test('Upstream errors expose only a fixed category, with bounded reads',async()=>{
  for(const [error,category] of [
-  [{code:'json_validate_failed',message:'test-secret '+decision.reason},'upstream_schema'],
+  [{code:'json_validate_failed',message:'test-secret '+decision.reason},'upstream_schema_generation'],
   [{type:'invalid_request_error',message:'test-secret '+decision.reason},'upstream_request'],
+  [{message:'response_format JSON schema contains an invalid enum'},'upstream_schema_enum'],
+  [{message:'response_format schema too complex'},'upstream_schema_complex'],
+  [{message:'json_schema strict is unavailable'},'upstream_schema_strict'],
   [{code:'model_not_found'},'upstream_model'],
   [{code:'context_length_exceeded'},'upstream_context'],
   [{code:decision.reason,type:'test-secret',message:'unknown'},'upstream_other']
